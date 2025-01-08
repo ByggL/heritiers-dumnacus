@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ImageCard from "../components/ImageCard.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -13,15 +14,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <body>
     <Header />
     <main>
-      <div class="flex flex-row">
+      <div class="flex flex-row w-4/5 margin">
         <img src="/public/bouclier2png.png" alt="bouclier" class="w-1/2" />
         <h1 class="font-richard text-wrap text-7xl m-auto">
           Et si pour une fois, c'était vous le Héros ?
         </h1>
       </div>
-      <div class="h-5 separator"></div>
-      <div>
-        <h1 class="text-center text-4xl font-richard text-bold mt-[5%]">
+      <div class="h-6 w-full bg-hGreen border-[3px] margin mt-[5%] drop-shadow-lg"></div>
+      <div class="w-4/5 margin">
+        <h1 class="text-center text-4xl font-richard text-bold mt-[3%]">
           Bienvenue chez les Héritiers de Dumnacus !
         </h1><br />
 
@@ -65,6 +66,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             target="_blank">forum</a
           > !
         </p>
+      </div>
+      <div class="font-rotis text-5xl text-center bg-hGreen w-full border-[3px] margin mt-[5%] drop-shadow-lg">En ce moment sur nos tables</div>
+      <div>
+        <ImageCard text="Donjons et Dragons 5e" image="/public/DnD-Emblem.png">
       </div>
     </main>
     <Footer />
