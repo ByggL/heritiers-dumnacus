@@ -1,0 +1,22 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	text: string;
+	image: string;
+    href: string;
+    header: string;
+}
+
+const { text, image = '/bouclier2png.png', href, header } = Astro.props;
+---
+
+<div class="flex flex-col w-[30%] justify-between margin">
+    <a href={href}>
+        <div class="h-[30%]">
+            <img src={image} class="object-contain"/>
+        </div>
+    </a>
+    <a href={href} class="font-bold text-3xl margin underline">{header}</a>
+    <p class="margin mt-1 text-base">{text}</p>
+</div>
