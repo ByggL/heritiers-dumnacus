@@ -1,16 +1,22 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
 ---
 
 <header class="bg-hGreen w-full sticky top-0 z-50">
 	<nav>
-		<h2 class="font-rotis font-bold text-5xl"><a href="/">{SITE_TITLE}</a></h2>
-		<div  class="internal-links font-richard">
+		<h2 class="font-rotis font-bold text-5xl">
+			<a href="/">{SITE_TITLE}</a>
+		</h2>
+		<div class="internal-links font-richard">
 			<HeaderLink href="/">Accueil</HeaderLink>
-			<HeaderLink href="/about">Nous Rejoindre</HeaderLink>
+			<HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
 			<HeaderLink href="/blog">Jeux de Rôles</HeaderLink>
-			<HeaderLink href="https://heritiers-dumnacus.forumactif.org/" target="_blank">Forum</HeaderLink>
+			<HeaderLink
+				href="https://heritiers-dumnacus.forumactif.org/"
+				target="_blank">Forum</HeaderLink
+			>
+			<HeaderLink href="/about">L'Association</HeaderLink>
 		</div>
 	</nav>
 </header>
@@ -39,6 +45,6 @@ import { SITE_TITLE } from '../consts';
 	}
 	nav a.active {
 		text-decoration: none;
-		border-bottom-color: #222939
+		border-bottom-color: #222939;
 	}
 </style>

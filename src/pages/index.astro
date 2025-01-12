@@ -11,80 +11,110 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <div class="flex flex-row w-4/5 margin">
-        <img src="/public/bouclier2png.png" alt="bouclier" class="w-1/2" />
-        <h1 class="font-richard text-wrap text-7xl m-auto">
-          Et si pour une fois, c'était vous le Héros ?
-        </h1>
-      </div>
-      <Separator/>
-      <div class="margin">
-        <h1 class="text-center text-4xl font-richard text-bold mt-[3%]">
-          Bienvenue chez les Héritiers de Dumnacus !
-        </h1><br />
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <div class="flex flex-row w-4/5 margin">
+                <img
+                    src="/public/bouclier2png.png"
+                    alt="bouclier"
+                    class="w-1/2"
+                />
+                <h1 class="font-richard text-wrap text-7xl m-auto">
+                    Et si pour une fois, c'était vous le Héros ?
+                </h1>
+            </div>
+            <Separator />
+            <div class="margin">
+                <h1 class="text-center text-4xl font-richard text-bold mt-[3%]">
+                    Bienvenue chez les Héritiers de Dumnacus !
+                </h1><br />
 
-        <h3 class="paragraph-header">Qui sommes-nous ?</h3>
-        <p>
-          Les Héritiers de Dumnacus sont une association de Jeux de Rôles située
-          à Angers. Notre objectif est de nous réunir pour pratiquer notre
-          loisir, mais également de le faire découvrir à un public novice lors
-          d'événements organisés.
-        </p><br />
+                <h3 class="paragraph-header">Qui sommes-nous ?</h3>
+                <p>
+                    Les Héritiers de Dumnacus sont une association de Jeux de
+                    Rôles située à Angers. Notre objectif est de nous réunir
+                    pour pratiquer notre loisir, mais également de le faire
+                    découvrir à un public novice lors d'événements organisés.
+                </p><br />
 
-        <h3 class="paragraph-header">
-          Vous êtes novice et n'osez pas franchir le pas ?
-        </h3>
-        <p>
-          Rien ne vous oblige à adhérer à notre association directement : vous
-          pouvez venir découvrir ce loisir pendant <span class="font-bold">trois séances gratuitement</span>
-          sans vous engager !
-        </p><br />
+                <h3 class="paragraph-header">
+                    Vous êtes novice et n'osez pas franchir le pas ?
+                </h3>
+                <p>
+                    Rien ne vous oblige à adhérer à notre association
+                    directement : vous pouvez venir découvrir ce loisir pendant <span
+                        class="font-bold">trois séances gratuitement</span
+                    >
+                    sans vous engager !
+                </p><br />
 
-        <h3 class="paragraph-header">Le coût de l'adhésion vous effraie ?</h3>
-        <p>
-          L'adhésion ne coûte que 20€ par an et seulement 15€ pour les
-          étudiants, et donne accès à tous les avantages d'adhérent ainsi que
-          des réduction chez nos boutiques partenaires.
-        </p><br />
+                <h3 class="paragraph-header">
+                    Le coût de l'adhésion vous effraie ?
+                </h3>
+                <p>
+                    L'adhésion ne coûte que 20€ par an et seulement 15€ pour les
+                    étudiants, et donne accès à tous les avantages d'adhérent
+                    ainsi que des réduction chez nos boutiques partenaires.
+                </p><br />
 
-        <h3 class="paragraph-header">Où nous trouver ?</h3>
-        <p>
-          Nos locaux sont dans les locaux du 42, au <span class="font-bold">42 rue Henri Hamelin, 49000
-          Angers</span>.
-        </p><br />
+                <h3 class="paragraph-header">Où nous trouver ?</h3>
+                <p>
+                    Nos locaux sont dans les locaux du 42, au <span
+                        class="font-bold"
+                        >42 rue Henri Hamelin, 49000 Angers</span
+                    >.
+                </p><br />
 
-        <h3 class="paragraph-header">Quand est-ce qu'on joue ?</h3>
-        <p>
-          Nous avons des parties essentiellement de jeux de rôles environ tous
-          les samedis, une l'après-midi et une le soir, en fonction des
-          propositions et présences. Vous pouvez consulter et discuter de la
-          prochaine partie sur notre <a
-            href="https://heritiers-dumnacus.forumactif.org/"
-            target="_blank">forum</a
-          > !
-        </p>
-      </div>
-      <div class="font-rotis text-5xl text-center bg-hGreen w-full border-[3px] margin mt-[5%] drop-shadow-lg">En ce moment sur nos tables</div>
-      <br>
-      <AlignedItems>
-        <ImageCard text="Wrath & Glory" image="/public/rpg/wg.jpg"/>
-        <ImageCard text="Fallout 111" image="/public/rpg/fallout.jpg"/>
-        <ImageCard text="Vampire la Mascarade" image="/public/rpg/vampire.png"/>
-        <ImageCard text="Donjon de Poche" image="/public/rpg/donjondepoche.jpg"/>
-      </AlignedItems>
-      <Separator/>
-      <br>
-      <AlignedItems>
-        <ImageLinkCard header="Notre Forum" href="https://heritiers-dumnacus.forumactif.org/" image="public/forumactif-logo.png" text="Pour l'organisation de nos parties"/>
-        <ImageLinkCard header="Notre Discord" href="https://discord.gg/4qdqpWbYdA" image="public/Discord-Logo.png" text="Pour des parties en ligne"/>
-      </AlignedItems>
-    </main>
-    <Footer />
-  </body>
+                <h3 class="paragraph-header">Quand est-ce qu'on joue ?</h3>
+                <p>
+                    Nous avons des parties essentiellement de jeux de rôles
+                    environ tous les samedis, une l'après-midi et une le soir,
+                    en fonction des propositions et présences. Vous pouvez
+                    consulter et discuter de la prochaine partie sur notre <a
+                        href="https://heritiers-dumnacus.forumactif.org/"
+                        target="_blank">forum</a
+                    > !
+                </p>
+            </div>
+            <div
+                class="font-rotis text-5xl text-center bg-hGreen w-full border-[3px] margin mt-[5%] drop-shadow-lg"
+            >
+                En ce moment sur nos tables
+            </div>
+            <br />
+            <AlignedItems>
+                <ImageCard text="Wrath & Glory" image="/public/rpg/wg.jpg" />
+                <ImageCard text="Fallout 111" image="/public/rpg/fallout.jpg" />
+                <ImageCard
+                    text="Vampire la Mascarade"
+                    image="/public/rpg/vampire.png"
+                />
+                <ImageCard
+                    text="Donjon de Poche"
+                    image="/public/rpg/donjondepoche.jpg"
+                />
+            </AlignedItems>
+            <Separator />
+            <br />
+            <AlignedItems>
+                <ImageLinkCard
+                    header="Notre Forum"
+                    href="https://heritiers-dumnacus.forumactif.org/"
+                    image="public/forumactif-logo.png"
+                    text="Pour l'organisation de nos parties"
+                />
+                <ImageLinkCard
+                    header="Notre Discord"
+                    href="https://discord.gg/4qdqpWbYdA"
+                    image="public/Discord-Logo.png"
+                    text="Pour des parties en ligne"
+                />
+            </AlignedItems>
+        </main>
+        <Footer />
+    </body>
 </html>
