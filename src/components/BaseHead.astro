@@ -4,9 +4,9 @@
 import "../styles/global.css";
 
 interface Props {
-  title: string;
-  description: string;
-  image?: string;
+    title: string;
+    description: string;
+    image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -18,47 +18,48 @@ const { title, description, image = "/bouclier2png.png" } = Astro.props;
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/png" href="/bouclier2png.png" />
+<link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
 <link
-  rel="preload"
-  href="/fonts/atkinson-regular.woff"
-  as="font"
-  type="font/woff"
-  crossorigin
+    rel="preload"
+    href="/fonts/atkinson-regular.woff"
+    as="font"
+    type="font/woff"
+    crossorigin
 />
 <link
-  rel="preload"
-  href="/fonts/atkinson-bold.woff"
-  as="font"
-  type="font/woff"
-  crossorigin
+    rel="preload"
+    href="/fonts/atkinson-bold.woff"
+    as="font"
+    type="font/woff"
+    crossorigin
 />
 <link
-  rel="preload"
-  href="/fonts/RotisSemiSerifStd.woff"
-  as="font"
-  type="font/woff"
-  crossorigin
+    rel="preload"
+    href="/fonts/RotisSemiSerifStd.woff"
+    as="font"
+    type="font/woff"
+    crossorigin
 />
 <link
-  rel="preload"
-  href="/fonts/RotisSemiSerifStd-Bold.woff"
-  as="font"
-  type="font/woff"
-  crossorigin
+    rel="preload"
+    href="/fonts/RotisSemiSerifStd-Bold.woff"
+    as="font"
+    type="font/woff"
+    crossorigin
 />
 <link
-  rel="preload"
-  href="/fonts/PoorRichardOpti.otf"
-  as="font"
-  type="font/opentype"
-  crossorigin
+    rel="preload"
+    href="/fonts/PoorRichardOpti.otf"
+    as="font"
+    type="font/opentype"
+    crossorigin
 />
 <link
-  href="https://fonts.googleapis.com/css?family=Open Sans"
-  rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open Sans"
+    rel="stylesheet"
 />
 
 <!-- Canonical URL -->
