@@ -19,7 +19,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         <main>
             <div class="flex flex-row w-4/5 margin">
                 <img src="/bouclier2png.png" alt="bouclier" class="w-1/2" />
-                <h1 class="font-richard text-wrap text-7xl m-auto">
+                <h1 class="font-richard text-wrap text-[5vw] m-auto">
                     Et si pour une fois, c'était vous le Héros ?
                 </h1>
             </div>
@@ -78,39 +78,41 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
                 </p>
             </div>
             <div
-                class="font-rotis text-5xl text-center bg-hGreen w-full border-[3px] margin mt-[5%] drop-shadow-lg"
+                class="font-rotis text-[5vw] text-center bg-hGreen w-full border-[3px] margin mt-[5%] drop-shadow-lg"
             >
                 En ce moment sur nos tables
             </div>
             <br />
-            <AlignedItems>
-                <ImageCard text="Wrath & Glory" image="/rpg/wg.jpg" />
-                <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" />
-                <ImageCard
-                    text="Vampire la Mascarade"
-                    image="/rpg/vampire.png"
-                />
-                <ImageCard
-                    text="Donjon de Poche"
-                    image="/rpg/donjondepoche.jpg"
-                />
-            </AlignedItems>
-            <Separator />
-            <br />
-            <AlignedItems>
-                <ImageLinkCard
-                    header="Notre Forum"
-                    href="https://heritiers-dumnacus.forumactif.org/"
-                    image="/forumactif-logo.png"
-                    text="Pour l'organisation de nos parties"
-                />
-                <ImageLinkCard
-                    header="Notre Discord"
-                    href="https://discord.gg/4qdqpWbYdA"
-                    image="/Discord-Logo.png"
-                    text="Pour des parties en ligne"
-                />
-            </AlignedItems>
+            <div class="align-mobile">
+                <AlignedItems>
+                    <ImageCard text="Wrath & Glory" image="/rpg/wg.jpg" />
+                    <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" />
+                    <ImageCard
+                        text="Vampire la Mascarade"
+                        image="/rpg/vampire.png"
+                    />
+                    <ImageCard
+                        text="Donjon de Poche"
+                        image="/rpg/donjondepoche.jpg"
+                    />
+                </AlignedItems>
+                <Separator />
+                <br />
+                <AlignedItems>
+                    <ImageLinkCard
+                        header="Notre Forum"
+                        href="https://heritiers-dumnacus.forumactif.org/"
+                        image="/forumactif-logo.png"
+                        text="Pour l'organisation de nos parties"
+                    />
+                    <ImageLinkCard
+                        header="Notre Discord"
+                        href="https://discord.gg/4qdqpWbYdA"
+                        image="/Discord-Logo.png"
+                        text="Pour des parties en ligne"
+                    />
+                </AlignedItems>
+            </div>
         </main>
         <Footer />
     </body>

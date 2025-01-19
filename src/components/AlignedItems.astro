@@ -2,6 +2,19 @@
 import "../styles/global.css";
 ---
 
-<div class="flex flex-row margin">
+<div class="flex margin">
     <slot />
 </div>
+
+<style>
+    @media screen and (max-width: 600px) {
+        div {
+            flex-direction: column;
+        }
+    }
+    @media screen and (min-width: 600px) {
+        div {
+            flex-direction: row;
+        }
+    }
+</style>
