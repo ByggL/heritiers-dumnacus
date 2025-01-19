@@ -4,47 +4,50 @@ import { SITE_TITLE } from "../consts";
 ---
 
 <header class="bg-hGreen w-full sticky top-0 z-50">
-	<nav>
-		<h2 class="font-rotis font-bold text-5xl">
-			<a href="/">{SITE_TITLE}</a>
-		</h2>
-		<div class="internal-links font-richard">
-			<HeaderLink href="/">Accueil</HeaderLink>
-			<HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
-			<HeaderLink href="/blog">Jeux de Rôles</HeaderLink>
-			<HeaderLink
-				href="https://heritiers-dumnacus.forumactif.org/"
-				target="_blank">Forum</HeaderLink
-			>
-			<HeaderLink href="/about">L'Association</HeaderLink>
-		</div>
-	</nav>
+  <nav>
+    <div class="flex flex-row">
+      <img src="/bouclier2png.png" alt="" class="h-10" />
+      <h2 class="font-rotis font-bold text-5xl">
+        <a href="/">{SITE_TITLE}</a>
+      </h2>
+    </div>
+    <div class="internal-links font-richard">
+      <HeaderLink href="/">Accueil</HeaderLink>
+      <HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
+      <HeaderLink href="/blog">Jeux de Rôles</HeaderLink>
+      <HeaderLink
+        href="https://heritiers-dumnacus.forumactif.org/"
+        target="_blank">Forum</HeaderLink
+      >
+      <!-- <HeaderLink href="/about">L'Association</HeaderLink> -->
+    </div>
+  </nav>
 </header>
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
+  header {
+    margin: 0;
+    padding: 0 1em;
+    box-shadow: 0 2px 8px rgba(var(--black), 5%);
+  }
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+  }
 
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: #222939;
-	}
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav a {
+    padding: 1em 0.5em;
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+  nav a.active {
+    text-decoration: none;
+    border-bottom-color: #222939;
+  }
 </style>

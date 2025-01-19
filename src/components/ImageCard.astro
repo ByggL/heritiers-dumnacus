@@ -1,17 +1,18 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
-	text: string;
-	image: string;
+  text: string;
+  image: string;
 }
 
-const { text, image = '/bouclier2png.png' } = Astro.props;
+const { text, image = "/bouclier2png.png" } = Astro.props;
 ---
 
-<div class="flex flex-col w-[20%] justify-between margin">
-    <div class="h-[20%]">
-        <img src={image} class="object-cover"/>
-    </div>
-    <p class="margin mt-1 text-base">{text}</p>
+<div class="flex flex-col w-[23%] justify-between margin">
+  <div class="w-full h-full">
+    <img src={image} class="h-full w-full object-cover" />
+  </div>
+
+  <p class="margin mt-1 text-base font-bold">{text}</p>
 </div>

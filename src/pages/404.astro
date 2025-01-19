@@ -1,0 +1,27 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ImageCard from "../components/ImageCard.astro";
+import ImageLinkCard from "../components/ImageLinkCard.astro";
+import AlignedItems from "../components/AlignedItems.astro";
+import Separator from "../components/Separator.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="m-20">
+      <h1 class="font-richard text-wrap text-7xl text-center">ERREUR 404</h1>
+      <h2 class="font-richard text-wrap text-5xl text-center">
+        Page non trouvée
+      </h2>
+    </main>
+    <Footer />
+  </body>
+</html>
