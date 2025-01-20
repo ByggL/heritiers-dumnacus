@@ -95,6 +95,10 @@ main {
   padding: 3em 1em;
 }
 
+p {
+  text-wrap: pretty;
+}
+
 .separator {
   background-image: url("../../public/separator1.png");
   filter: hue-rotate(80deg);
