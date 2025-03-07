@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import { SEO } from "astro-seo";
 
 interface Props {
     title: string;
@@ -69,14 +70,11 @@ const {
 />
 
 <!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
 <link rel="shortlink" href={canonicalURL} />
 <!-- <link rel="canonical" href="https://example.com/dresses/green-dresses" /> -->
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
 <meta property="description" content={description} />
 <meta
     name="keywords"
@@ -84,17 +82,42 @@ const {
     lang="fr"
 />
 
+<SEO
+    title={title}
+    description={description}
+    canonical={canonicalURL}
+    openGraph={{
+        basic: {
+            title: title,
+            type: "website",
+            image: new URL(image, Astro.url).toString(),
+            url: Astro.url,
+        },
+        optional: {
+            siteName: "Les Héritiers de Dumnacus",
+            description: description,
+        },
+    }}
+    ,
+    twitter={{
+        card: "summary_large_image",
+        title: title,
+        description: description,
+        image: new URL(image, Astro.url),
+    }}
+/>
+
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<!-- <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
-<meta content="Les Héritiers de Dumnacus" property="og:site_name" />
+<meta content="Les Héritiers de Dumnacus" property="og:site_name" /> -->
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<!-- <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
+<meta property="twitter:url" content={Astro.url} />
