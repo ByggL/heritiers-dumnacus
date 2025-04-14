@@ -3,4 +3,5 @@
 
 export const SITE_TITLE =
   "Les Héritiers de Dumnacus - Association de Jeux de rôle à Angers";
-export const SITE_DESCRIPTION = "Forum de l'association Les Héritiers de Dumnacus, un club de jeux de rôle à Angers (Maine-et-Loire)";
+export const SITE_DESCRIPTION =
+  "Forum de l'association Les Héritiers de Dumnacus, un club de jeux de rôle à Angers (Maine-et-Loire)";

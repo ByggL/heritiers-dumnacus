@@ -8,7 +8,7 @@ export default {
       hGreen: "#75BA03",
       hGrey: "#D1D7DA",
       white: "#FFFFFF",
-      black: "#000000"
+      black: "#000000",
     },
     fontFamily: {
       rotis: "Rotis",
