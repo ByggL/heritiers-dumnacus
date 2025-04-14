@@ -26,6 +26,7 @@ const posts = (await getCollection("blog")).sort(
             main {
                 width: 80%;
             }
+
             ul {
                 display: flex;
                 flex-wrap: wrap;
@@ -34,40 +35,50 @@ const posts = (await getCollection("blog")).sort(
                 margin: 0;
                 padding: 0;
             }
+
             ul li {
                 width: calc(50% - 1rem);
             }
+
             ul li * {
                 text-decoration: none;
                 transition: 0.2s ease;
             }
+
             ul li img {
                 margin-bottom: 0.5rem;
                 border-radius: 12px;
             }
+
             ul li a {
                 display: block;
             }
+
             .title {
                 margin: 0;
                 color: rgb(var(--black));
                 line-height: 1;
             }
+
             .date {
                 margin: 0;
                 color: rgb(var(--gray));
             }
+
             ul li a:hover h4,
             ul li a:hover .date {
                 color: rgb(var(--accent));
             }
+
             ul a:hover img {
                 box-shadow: var(--box-shadow);
             }
+
             @media (max-width: 720px) {
                 ul {
                     gap: 0.5em;
                 }
+
                 ul li {
                     width: 100%;
                     text-align: center;
@@ -93,7 +104,8 @@ const posts = (await getCollection("blog")).sort(
                         text="Donjon de Poche"
                         image="/rpg/donjondepoche.jpg"
                     />
-                </AlignedItems><br />
+                </AlignedItems>
+                <br />
                 <AlignedItems>
                     <ImageCard
                         text="Donjons et Dragons 5e"

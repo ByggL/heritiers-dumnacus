@@ -11,14 +11,16 @@ interface Props {
 const { text, image = "/bouclier2png.png", href, header } = Astro.props;
 ---
 
-<div class="flex flex-col w-[30%] margin">
+<div class="flex flex-col w-[30%] mx-auto">
     <a href={href}>
-        <div class="h-[30%]">
-            <img src={image} class="object-contain" />
+        <div class="flex justify-center items-center h-[30%]">
+            <img src={image} class="object-contain w-[30%]" />
         </div>
     </a>
-    <a href={href} class="font-bold text-3xl margin underline">{header}</a>
-    <p class="margin mt-1 text-base">{text}</p>
+    <a href={href} class="font-bold text-3xl text-center mt-4 underline"
+        >{header}</a
+    >
+    <p class="mt-1 text-base text-center">{text}</p>
 </div>
 
 <style>
