@@ -10,127 +10,130 @@ import ImageCard from "../../components/ImageCard.astro";
 import Separator from "../../components/Separator.astro";
 
 const posts = (await getCollection("blog")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <BaseHead
-            title={SITE_TITLE}
-            description={SITE_DESCRIPTION}
-            canonicalURL="https://www.heritiersdedumnacus.fr/jeux/"
+  <head>
+    <BaseHead
+      title={SITE_TITLE}
+      description={SITE_DESCRIPTION}
+      canonicalURL="https://www.heritiersdedumnacus.fr/jeux/"
+    />
+    <style>
+      main {
+        width: 80%;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul li {
+        width: calc(50% - 1rem);
+      }
+
+      ul li * {
+        text-decoration: none;
+        transition: 0.2s ease;
+      }
+
+      ul li img {
+        margin-bottom: 0.5rem;
+        border-radius: 12px;
+      }
+
+      ul li a {
+        display: block;
+      }
+
+      .title {
+        margin: 0;
+        color: rgb(var(--black));
+        line-height: 1;
+      }
+
+      .date {
+        margin: 0;
+        color: rgb(var(--gray));
+      }
+
+      ul li a:hover h4,
+      ul li a:hover .date {
+        color: rgb(var(--accent));
+      }
+
+      ul a:hover img {
+        box-shadow: var(--box-shadow);
+      }
+
+      @media (max-width: 720px) {
+        ul {
+          gap: 0.5em;
+        }
+
+        ul li {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1 class="font-richard text-wrap text-7xl text-center mb-[5%]">
+        Nos Jeux de Rôles
+      </h1>
+      <section>
+        <AlignedItems>
+          <ImageCard text="Wrath & Glory" image="/rpg/wg.jpg" />
+          <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" />
+          <ImageCard text="Vampire la Mascarade" image="/rpg/vampire.png" />
+          <ImageCard text="Donjon de Poche" image="/rpg/donjondepoche.jpg" />
+        </AlignedItems>
+        <br />
+        <AlignedItems>
+          <ImageCard text="Donjons et Dragons 5e" image="/rpg/DnD-Emblem.png" />
+          <ImageCard text="Earthdawn" image="/rpg/earthdawn.jpg" />
+          <ImageCard
+            text="Aventuriers de l'Âge Atlante"
+            image="/rpg/ageatlante.jpg"
+          />
+          <ImageCard text="Zombies" image="/rpg/zombies.png" />
+        </AlignedItems>
+        <!-- <Separator /> -->
+      </section>
+      <!-- <section>
+<ul>
+{
+  posts.map((post) => (
+    <li>
+      <a href={`/blog/${post.id}/`}>
+        <img
+          width={720}
+          height={360}
+          src={post.data.heroImage}
+          alt=""
         />
-        <style>
-            main {
-                width: 80%;
-            }
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
-            ul li {
-                width: calc(50% - 1rem);
-            }
-            ul li * {
-                text-decoration: none;
-                transition: 0.2s ease;
-            }
-            ul li img {
-                margin-bottom: 0.5rem;
-                border-radius: 12px;
-            }
-            ul li a {
-                display: block;
-            }
-            .title {
-                margin: 0;
-                color: rgb(var(--black));
-                line-height: 1;
-            }
-            .date {
-                margin: 0;
-                color: rgb(var(--gray));
-            }
-            ul li a:hover h4,
-            ul li a:hover .date {
-                color: rgb(var(--accent));
-            }
-            ul a:hover img {
-                box-shadow: var(--box-shadow);
-            }
-            @media (max-width: 720px) {
-                ul {
-                    gap: 0.5em;
-                }
-                ul li {
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <Header />
-        <main>
-            <h1 class="font-richard text-wrap text-7xl text-center mb-[5%]">
-                Nos Jeux de Rôle
-            </h1>
-            <section>
-                <AlignedItems>
-                    <ImageCard text="Wrath & Glory" image="/rpg/wg.jpg" />
-                    <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" />
-                    <ImageCard
-                        text="Vampire la Mascarade"
-                        image="/rpg/vampire.png"
-                    />
-                    <ImageCard
-                        text="Donjon de Poche"
-                        image="/rpg/donjondepoche.jpg"
-                    />
-                </AlignedItems><br />
-                <AlignedItems>
-                    <ImageCard
-                        text="Donjons et Dragons 5e"
-                        image="/rpg/DnD-Emblem.png"
-                    />
-                    <ImageCard text="Earthdawn" image="/rpg/earthdawn.jpg" />
-                    <ImageCard
-                        text="Aventuriers de l'Âge Atlante"
-                        image="/rpg/ageatlante.jpg"
-                    />
-                    <ImageCard text="Zombies" image="/rpg/zombies.png" />
-                </AlignedItems>
-                <!-- <Separator /> -->
-            </section>
-            <!-- <section>
-        <ul>
-          {
-            posts.map((post) => (
-              <li>
-                <a href={`/blog/${post.id}/`}>
-                  <img
-                    width={720}
-                    height={360}
-                    src={post.data.heroImage}
-                    alt=""
-                  />
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section> -->
-        </main>
-        <Footer />
-    </body>
+        <h4 class="title">{post.data.title}</h4>
+        <p class="date">
+          <FormattedDate date={post.data.pubDate} />
+        </p>
+      </a>
+    </li>
+  ))
+}
+</ul>
+</section> -->
+    </main>
+    <Footer />
+  </body>
 </html>
