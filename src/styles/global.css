@@ -87,6 +87,11 @@ body {
   overflow-wrap: break-word;
   font-size: 18px;
   line-height: 1.7;
+  background: url("/public/background-parchment.jpg") top / cover;
+  backdrop-filter: saturate(60%);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 main {
@@ -130,4 +135,8 @@ p {
   clip-path: inset(50%);
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
+}
+
+.parchment {
+  background: url("/public/background-parchment.jpg") no-repeat top / cover;
 }

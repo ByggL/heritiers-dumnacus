@@ -3,57 +3,60 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header class="bg-hGreen w-full sticky top-0 z-50">
-  <nav>
-    <div class="flex flex-row">
-      <img src="/bouclier2png.png" alt="" class="h-10 mt-auto mb-auto" />
-      <h2 class="font-rotis font-bold text-[3vw] leading-tight mt-auto mb-auto">
-        <a href="/">Les Héritiers de Dumnacus</a>
-      </h2>
-    </div>
-    <div class="internal-links font-richard">
-      <HeaderLink href="/">Accueil</HeaderLink>
-      <HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
-      <HeaderLink href="/jeux">Jeux de Rôles</HeaderLink>
-      <HeaderLink
-        href="https://heritiers-dumnacus.forumactif.org/"
-        target="_blank">Forum</HeaderLink
-      >
-    </div>
-  </nav>
+<header class="w-full">
+    <nav>
+        <div class="flex flex-row">
+            <img src="/bouclier2png.png" alt="" class="h-10 mt-auto mb-auto" />
+            <h2
+                class="font-rotis font-bold text-[3vw] leading-tight mt-auto mb-auto"
+            >
+                <a href="/">Les Héritiers de Dumnacus</a>
+            </h2>
+        </div>
+        <div class="internal-links font-richard">
+            <HeaderLink href="/">Accueil</HeaderLink>
+            <HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
+            <HeaderLink href="/jeux">Jeux de Rôles</HeaderLink>
+            <HeaderLink
+                href="https://heritiers-dumnacus.forumactif.org/"
+                target="_blank">Forum</HeaderLink
+            >
+        </div>
+    </nav>
 </header>
 <style>
-  @media screen and (max-width: 600px) {
-    header {
-      visibility: hidden;
-      height: 0;
-      overflow: hidden;
+    @media screen and (max-width: 600px) {
+        header {
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+        }
     }
-  }
-  header {
-    margin: 0;
-    padding: 0 1em;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
-  }
+    header {
+        margin: 0;
+        padding: 0 1em;
+        box-shadow: 0 2px 8px rgba(var(--black), 5%);
+        background-color: rgba(117, 186, 3, 0.7);
+    }
 
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
+    h2 a,
+    h2 a.active {
+        text-decoration: none;
+    }
 
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
-  }
-  nav a.active {
-    text-decoration: none;
-    border-bottom-color: #222939;
-  }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav a {
+        padding: 1em 0.5em;
+        color: var(--black);
+        border-bottom: 4px solid transparent;
+        text-decoration: none;
+    }
+    nav a.active {
+        text-decoration: none;
+        border-bottom-color: #222939;
+    }
 </style>
