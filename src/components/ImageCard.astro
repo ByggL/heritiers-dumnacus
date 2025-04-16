@@ -11,6 +11,7 @@ const { text, image = "/bouclier2png.png" } = Astro.props;
 
 <div
   class="flex flex-col justify-between margin"
+  id="wrapper"
   itemscope
   itemprop="https://schema.org/Game"
 >
@@ -27,6 +28,10 @@ const { text, image = "/bouclier2png.png" } = Astro.props;
   @media screen and (max-width: 600px) {
     div {
       width: 50vw;
+    }
+
+    #wrapper {
+      margin-bottom: 20px;
     }
 
     div > div {
