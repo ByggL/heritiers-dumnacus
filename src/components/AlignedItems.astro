@@ -2,7 +2,7 @@
 import "../styles/global.css";
 ---
 
-<div class="flex margin">
+<div class="flex justify-center">
   <slot />
 </div>
 
@@ -10,11 +10,22 @@ import "../styles/global.css";
   @media screen and (max-width: 600px) {
     div {
       flex-direction: column;
+      /* margin-bottom: 20px; */
+    }
+
+    div > * {
+      width: 100%;
+      margin: 10px;
     }
   }
   @media screen and (min-width: 600px) {
     div {
       flex-direction: row;
     }
+  }
+
+  div > * {
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>

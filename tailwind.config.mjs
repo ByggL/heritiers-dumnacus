@@ -13,6 +13,9 @@ export default {
     fontFamily: {
       rotis: "Rotis",
       richard: "Poor Richard",
+      richardbold: "Poor Richard Bold",
+      pandion: "Pandion",
+      balgruf: "Balgruf",
     },
   },
   plugins: [],

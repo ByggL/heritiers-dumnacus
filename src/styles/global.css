@@ -57,6 +57,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Poor Richard Bold";
+  src: url("/fonts/PoorRichardBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: "Droid Sans";
@@ -66,14 +73,26 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Pandion";
+  src: url("/fonts/PandionPersonalUse-vnOD9.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer components {
   .paragraph-header {
-    @apply text-xl font-extrabold;
+    @apply text-2xl font-richard font-extrabold;
   }
 
   .margin {
-    @apply ml-auto mr-auto;
+    @apply mx-auto;
   }
+
+  /* .parchment-highlight {
+    @apply bg-black bg-opacity-10 backdrop-saturate-200 p-2 rounded-lg;
+  } */
 }
 
 body {
@@ -139,4 +158,33 @@ p {
 
 .parchment {
   background: url("/public/background-parchment.jpg") no-repeat top / cover;
+}
+
+@media screen and (max-width: 600px) {
+  .parchment-highlight {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: saturate(200%);
+    padding: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+    box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 100%;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .parchment-highlight {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: saturate(200%);
+    padding: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+    box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 41.666667%;
+  }
 }
