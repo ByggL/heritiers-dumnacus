@@ -1,10 +1,11 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import Hamburger from "./Hamburger.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
 <header class="w-full">
-  <nav>
+  <nav class="desktop">
     <div class="flex flex-row">
       <img
         src="/bouclier2png.png"
@@ -18,22 +19,41 @@ import { SITE_TITLE } from "../consts";
     <div class="internal-links font-richard">
       <HeaderLink href="/">Accueil</HeaderLink>
       <HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
-      <HeaderLink href="/jeuxderole">Jeux de Rôles</HeaderLink>
+      <HeaderLink href="/jeuxderole">Jeux de Rôle</HeaderLink>
       <HeaderLink
         href="https://heritiers-dumnacus.forumactif.org/"
         target="_blank">Forum</HeaderLink
       >
     </div>
   </nav>
+  <div id="hamburger">
+    <Hamburger />
+  </div>
 </header>
 <style>
   @media screen and (max-width: 600px) {
-    header {
+    .desktop {
       visibility: hidden;
       height: 0;
       overflow: hidden;
     }
   }
+  @media screen and (min-width: 600px) {
+    #hamburger {
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  /* @media screen and (min-width: 600px) {
+        .hamburger {
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+        }
+    } */
+
   header {
     margin: 0;
     padding: 0 1em;
