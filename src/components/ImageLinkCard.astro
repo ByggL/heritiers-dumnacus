@@ -6,15 +6,16 @@ interface Props {
   image: string;
   href: string;
   header: string;
+  alt?: string;
 }
 
-const { text, image = "/bouclier2png.png", href, header } = Astro.props;
+const { text, image = "/bouclier2png.png", href, header, alt } = Astro.props;
 ---
 
 <div class="flex flex-col w-[30%] mx-auto" id="wrapper">
   <a href={href}>
     <div class="flex justify-center items-center h-[30%]">
-      <img src={image} class="object-contain w-[30%]" />
+      <img src={image} class="object-contain w-[30%]" alt={alt} />
     </div>
   </a>
   <a href={href} class="font-bold text-3xl text-center mt-4 underline"

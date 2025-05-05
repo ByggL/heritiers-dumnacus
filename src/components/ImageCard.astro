@@ -4,9 +4,10 @@ import "../styles/global.css";
 interface Props {
   text: string;
   image: string;
+  alt?: string;
 }
 
-const { text, image = "/bouclier2png.png" } = Astro.props;
+const { text, image = "/bouclier2png.png", alt } = Astro.props;
 ---
 
 <div
@@ -16,7 +17,7 @@ const { text, image = "/bouclier2png.png" } = Astro.props;
   itemprop="https://schema.org/Game"
 >
   <div class="w-full h-full" itemprop="image">
-    <img src={image} class="h-full w-full object-cover rounded-2xl" />
+    <img src={image} class="h-full w-full object-cover rounded-2xl" alt={alt} />
   </div>
 
   <p class="margin mt-4 font-richard text-xl font-bold" itemprop="name">
