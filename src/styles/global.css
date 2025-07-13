@@ -188,3 +188,8 @@ p {
     width: 41.666667%;
   }
 }
+
+a {
+  font-weight: bold;
+  text-decoration: underline;
+}
