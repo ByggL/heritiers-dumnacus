@@ -51,11 +51,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         <AlignedItems>
           <div itemprop="description" class="w-5/12 mx-5 parchment-highlight">
             <h3 class="paragraph-header">Qui sommes-nous ?</h3>
-            <p class="w-full">
+            <p class="w-full my-auto">
               Les Héritiers de Dumnacus sont une association de Jeux de Rôles
-              située à Angers. Notre objectif est de nous réunir pour pratiquer
-              notre loisir, mais également de le faire découvrir à un public
-              novice lors d'événements organisés.
+              située à Angers. Notre mission : partager notre passion en
+              réunissant des joueurs de tous niveaux, et faire découvrir ce
+              loisir à un public curieux lors d’événements ouverts à tous.
             </p>
           </div><br />
 
@@ -66,12 +66,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             <h3 class="paragraph-header">
               Vous êtes novice et n'osez pas franchir le pas ?
             </h3>
-            <p class="w-full">
-              Rien ne vous oblige à adhérer à notre association directement :
-              vous pouvez venir découvrir ce loisir pendant <span
-                class="font-bold">trois séances gratuitement</span
-              >
-              sans vous engager !
+            <p class="w-full my-auto">
+              <span class="font-bold">Pas besoin d’adhérer tout de suite</span> :
+              vous pouvez venir essayer
+              <span class="font-bold">gratuitement durant trois séances</span>,
+              sans engagement. C’est notre façon de vous accueillir comme il se
+              doit dans l’univers du jeu de rôle.
             </p>
           </div><br />
 
@@ -79,18 +79,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             <h3 class="paragraph-header">
               Le coût de l'adhésion vous effraie ?
             </h3>
-            <p class="w-full">
-              L'adhésion ne coûte que 20€ par an et seulement 15€ pour les
-              étudiants, et donne accès à tous les avantages d'adhérent ainsi
-              que des réduction chez nos boutiques partenaires.
-            </p>
+            <div class="my-auto">
+              <p class="w-full">
+                L'adhésion ne coûte que <span class="font-bold">20€ par an</span
+                > et seulement <span class="font-bold"
+                  >15€ pour les étudiants</span
+                >. <br />
+                En devenant membre, vous profitez :
+              </p>
+              <ul class="list-disc ml-6">
+                <li>de l’accès à toutes nos parties,</li>
+                <li>de réductions chez nos boutiques partenaires,</li>
+                <li>et d’une communauté chaleureuse et passionnée.</li>
+              </ul>
+            </div>
           </div><br />
         </AlignedItems>
         <br />
         <AlignedItems>
           <div itemprop="address" class="parchment-highlight">
             <h3 class="paragraph-header">Où nous trouver ?</h3>
-            <p class="w-full">
+            <p class="w-full my-auto">
               Nos locaux sont dans les locaux du 42, au <span class="font-bold"
                 >42 rue Henri Hamelin, 49000 Angers</span
               >.<br />
@@ -101,16 +110,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
           <div itemprop="event" class="parchment-highlight">
             <h3 class="paragraph-header">Quand est-ce qu'on joue ?</h3>
-            <p class="w-full">
-              Nous avons des parties essentiellement de jeux de rôles tous les
-              week-ends, une le samedi soir et une le dimanche après-midi, en
-              fonction des propositions et présences. Vous pouvez consulter et
-              discuter de la prochaine partie sur notre <a
-                href="https://heritiers-dumnacus.forumactif.org/"
-                target="_blank"
-                class="font-bold underline">forum</a
-              > !
-            </p>
+            <div class="my-auto">
+              <p class="w-full">
+                Nous organisons des parties chaque week-end :
+              </p>
+              <ul class="list-disc ml-6">
+                <li>le samedi soir</li>
+                <li>et le dimanche après-midi</li>
+              </ul>
+              <p class="w-full">
+                selon les propositions des meneurs et les disponibilités des
+                joueurs.<br />
+                Vous pouvez consulter et discuter de la prochaine partie sur notre
+                <a
+                  href="https://heritiers-dumnacus.forumactif.org/"
+                  target="_blank"
+                  class="font-bold underline">forum</a
+                > !
+              </p>
+            </div>
           </div>
         </AlignedItems>
         <br />
@@ -119,15 +137,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             <h3 class="paragraph-header">
               Je veux essayer ! Je fais comment ?
             </h3>
-            <p class="w-full">
-              Tout le monde, novice comme vétéran, est bienvenu à nos parties !
-              Pour participer, il suffit de venir sur le <a
-                href="https://heritiers-dumnacus.forumactif.org/"
-                target="_blank"
-                class="font-bold underline">forum</a
-              > et d'indiquer sa présence sur la page de la partie (possible aussi
-              de le faire via <a href="https://discord.gg/4qdqpWbYdA">Discord</a
-              >).<br />
+            <div class="my-auto">
+              <p class="w-full">
+                Tout le monde est le bienvenu, novice comme vétéran ! Pour vous
+                inscrire à une partie :
+              </p>
+              <ul class="list-decimal ml-6">
+                <li>
+                  Rendez-vous sur notre <a
+                    href="https://heritiers-dumnacus.forumactif.org/"
+                    target="_blank"
+                    class="font-bold underline">forum</a
+                  >.
+                </li>
+                <li>Trouvez la partie qui vous intéresse.</li>
+                <li>
+                  Indiquez votre présence dans le sujet correspondant (ou via <a
+                    href="https://discord.gg/4qdqpWbYdA">Discord</a
+                  > si c’est plus simple pour vous).
+                </li>
+              </ul>
               <i
                 ><small
                   >Note : certaines de nos parties sont pour un public <b
@@ -136,60 +165,61 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
                   si vous êtes mineur.</small
                 ></i
               >
-            </p>
+            </div>
           </div>
         </AlignedItems>
       </div>
-      <div
-        class="font-rotis text-[3vw] text-center w-full border-[3px] margin mt-[5%] drop-shadow-lg"
-        style="background-color: rgba(117, 186, 3, 0.7);"
-      >
-        En ce moment sur nos tables
-      </div>
-      <br />
-      <div class="align-mobile">
-        <AlignedItems>
-          <ImageCard
-            text="Wrath & Glory"
-            image="/rpg/wg.jpg"
-            alt="Image de couverture du jeu de rôle Wrath and Glory"
-          />
-          <ImageCard
-            text="Fallout 111"
-            image="/rpg/fallout.jpg"
-            alt="Image de couverture du jeu de rôle Fallout 111"
-          />
-          <ImageCard
-            text="Vampire la Mascarade"
-            image="/rpg/vampire.png"
-            alt="Image de couverture du jeu de rôle Vampire la Mascarade"
-          />
-          <ImageCard
-            text="Donjon de Poche"
-            image="/rpg/donjondepoche.jpg"
-            alt="Image du jeu rôle Donjon de Poche"
-          />
-        </AlignedItems>
-        <Separator />
-        <br />
-        <AlignedItems>
-          <ImageLinkCard
-            header="Notre Forum"
-            href="https://heritiers-dumnacus.forumactif.org/"
-            image="/forumactif-logo.png"
-            text="Pour l'organisation de nos parties"
-            alt="Logo de forumactif, plateforme du forum des Héritiers de Dumnacus"
-          />
-          <ImageLinkCard
-            header="Notre Discord"
-            href="https://discord.gg/4qdqpWbYdA"
-            image="/Discord-Logo.png"
-            text="Notre second plateforme de communication"
-            alt="Logo de Discord, plateforme de communication secondaire des Héritiers de Dumnacus"
-          />
-        </AlignedItems>
-      </div>
     </main>
+    <div
+      class="font-rotis text-[3vw] text-center w-11/12 border-[3px] margin mt-[5%] drop-shadow-lg"
+      style="background-color: rgba(117, 186, 3, 0.7);"
+    >
+      En ce moment sur nos tables
+    </div>
+    <br />
+    <div class="align-mobile">
+      <AlignedItems>
+        <ImageCard
+          text="Wrath & Glory"
+          image="/rpg/wg.jpg"
+          alt="Image de couverture du jeu de rôle Wrath and Glory"
+        />
+        <ImageCard
+          text="Fallout 111"
+          image="/rpg/fallout.jpg"
+          alt="Image de couverture du jeu de rôle Fallout 111"
+        />
+        <ImageCard
+          text="Vampire la Mascarade"
+          image="/rpg/vampire.png"
+          alt="Image de couverture du jeu de rôle Vampire la Mascarade"
+        />
+        <ImageCard
+          text="Donjon de Poche"
+          image="/rpg/donjondepoche.jpg"
+          alt="Image du jeu rôle Donjon de Poche"
+        />
+      </AlignedItems>
+      <Separator />
+      <br />
+      <AlignedItems>
+        <ImageLinkCard
+          header="Notre Forum"
+          href="https://heritiers-dumnacus.forumactif.org/"
+          image="/forumactif-logo.png"
+          text="Pour l'organisation de nos parties"
+          alt="Logo de forumactif, plateforme du forum des Héritiers de Dumnacus"
+        />
+        <ImageLinkCard
+          header="Notre Discord"
+          href="https://discord.gg/4qdqpWbYdA"
+          image="/Discord-Logo.png"
+          text="Notre second plateforme de communication"
+          alt="Logo de Discord, plateforme de communication secondaire des Héritiers de Dumnacus"
+        />
+      </AlignedItems>
+    </div>
+
     <Footer />
   </body>
 </html>
