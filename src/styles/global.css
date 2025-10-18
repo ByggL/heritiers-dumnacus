@@ -114,10 +114,10 @@ body {
 }
 
 main {
-  width: 90%;
+  /* width: 90%; */
   /* max-width: calc(100% - 2em); */
   margin: auto;
-  padding: 3em 1em;
+  /* padding: 3em 1em; */
 }
 
 p {
@@ -196,4 +196,13 @@ p {
 a {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("tavern.png") top / cover;
+  width: 100%;
+  height: 60rem;
+  padding-top: 5rem;
 }
