@@ -93,12 +93,6 @@
   /* .parchment-highlight {
     @apply bg-black bg-opacity-10 backdrop-saturate-200 p-2 rounded-lg;
   } */
-
-  .text-inset {
-    text-shadow:
-      1px 1px 2px rgba(0, 0, 0, 0.8),
-      /* Dark shadow for depth */ -1px -1px 2px rgba(255, 255, 255, 0.5); /* Light shadow for highlight */
-  }
 }
 
 body {
@@ -212,3 +206,27 @@ a {
   height: 60rem;
   padding-top: 5rem;
 }
+
+.carved-text {
+  /* font-family: "Cinzel", serif; */
+  font-weight: 700;
+  color: orange;
+  background: inherit;
+  position: relative;
+  text-shadow:
+    1px 1px 1px rgba(255, 255, 255, 0.2),
+    /* highlight edge */ -2px -1px 1px rgba(0, 0, 0, 0.6); /* inner shadow */
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Optional: darker surface effect behind text */
+/* .carved-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(0, 0, 0, 0.3);
+  filter: blur(1px);
+  z-index: -1;
+} */
