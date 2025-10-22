@@ -20,7 +20,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   </head>
   <body>
     <Header />
-    <main style="color: white;">
+    <main>
       <div
         style="font-size: 1px; position: absolute; left: 0; right:0; opacity: 0%;"
       >
@@ -104,15 +104,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         <br />
         <AlignedItems>
           <div itemprop="address" class="parchment-highlight">
-            <h3 class="paragraph-header">Où nous trouver ?</h3>
-            <p class="w-full my-auto">
-              Venez nous retrouver au <span class="font-bold"
-                >12 rue Louis Boiramé, 49000 Angers</span
-              >, dans la résidence Arceau.<br />
-              Sur place vous pourrez nous trouver via l'entrée accessible en faisant
-              le tour du bâtiment par le square Louis Boisramé. Un de nos membres
-              viendra vous ouvrir.
-            </p>
+            <div>
+              <h3 class="paragraph-header">Où nous trouver ?</h3>
+              <p class="w-full my-auto">
+                Venez nous retrouver au <span class="font-bold"
+                  >12 rue Louis Boiramé, 49000 Angers</span
+                >, dans la résidence Arceau.<br />
+                Sur place vous pourrez nous trouver via l'entrée accessible en faisant
+                le tour du bâtiment par le square Louis Boisramé. Un de nos membres
+                viendra vous ouvrir.
+              </p>
+            </div>
+            <img
+              src="art-deco-frame.svg#svgView(preserveAspectRatio(none))"
+              alt=""
+            />
           </div><br />
 
           <div itemprop="event" class="parchment-highlight">
@@ -178,10 +184,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       </div>
     </main>
     <div
-      class="font-rotis text-[3vw] text-center w-11/12 border-[3px] margin mt-[5%] drop-shadow-lg"
+      class="font-rotis text-[3vw] text-center w-11/12 border-[3px] margin mt-[5%] drop-shadow-lg relative"
       style="background-color: rgba(117, 186, 3, 0.7);"
     >
-      En ce moment sur nos tables
+      <img
+        src="art-deco-frame.svg"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      />
+      <span class="relative z-10">En ce moment sur nos tables</span>
     </div>
     <br />
     <div class="align-mobile w-10/12 margin mt-10">
