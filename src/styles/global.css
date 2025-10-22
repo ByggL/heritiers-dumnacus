@@ -95,7 +95,7 @@ body {
   color: white;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  background: #eee;
+  background: #121212;
   background-size: 100% 600px;
   backdrop-filter: none; /* Remove background filter */
 }
@@ -202,12 +202,13 @@ a:hover {
     background-size: contain; */
     /* background: rgba(0, 0, 0, 0.1); */
     /* backdrop-filter: saturate(200%); */
-    padding: 8px;
+    padding: 8px 64px 8px 64px;
     /* border-radius: 8px; */
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-    box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-    margin-left: 20px;
-    margin-right: 20px;
+    /* -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+    box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1); */
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 50px;
     width: 41.666667%;
     display: flex;
     flex-direction: column;
@@ -222,11 +223,13 @@ a:hover {
   position: absolute;
   inset: 0;
   transform: rotate(90deg);
-  width: 60%;
-  margin: -20% auto;
+  width: 35%;
+  margin: -40% auto;
   transform-box: fill-box;
   transform-origin: center;
-  aspect-ratio: 1/2;
+  aspect-ratio: 1/3;
+  filter: brightness(0) saturate(100%) invert(80%) sepia(64%) saturate(1298%)
+    hue-rotate(359deg) brightness(104%) contrast(104%);
 }
 
 .hero {
