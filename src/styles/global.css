@@ -197,9 +197,9 @@ a:hover {
 }
 @media screen and (min-width: 600px) {
   .parchment-highlight {
-    /* background-image: url("/public/art-deco-frame.svg");
-    background-repeat: no-repeat;
-    background-size: contain; */
+    background-image: url("/public/woodboard.png");
+    /* background-repeat:; */
+    background-size: contain;
     /* background: rgba(0, 0, 0, 0.1); */
     /* backdrop-filter: saturate(200%); */
     padding: 8px 64px 8px 64px;
@@ -214,6 +214,8 @@ a:hover {
     flex-direction: column;
     z-index: 10;
     position: relative;
+    border: 3px solid gray;
+    border-radius: 10px;
   }
 }
 
