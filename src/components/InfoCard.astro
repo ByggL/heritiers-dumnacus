@@ -1,0 +1,18 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  className: string;
+  heading: string;
+  itemprop?: string;
+}
+
+const { className, heading, itemprop } = Astro.props;
+---
+
+<div itemprop="description" class:list={['parchment-highlight', className]} {itemprop}>
+  <h3 class="paragraph-header">{heading}</h3>
+  <div class="w-full my-auto">
+    <slot/>
+  </div>
+</div>

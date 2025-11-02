@@ -7,6 +7,7 @@ import ImageLinkCard from "../components/ImageLinkCard.astro";
 import AlignedItems from "../components/AlignedItems.astro";
 import Separator from "../components/Separator.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import InfoCard from "../components/InfoCard.astro";
 ---
 
 <!doctype html>
@@ -55,36 +56,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         </h1><br />
 
         <AlignedItems>
-          <div itemprop="description" class="w-5/12 mx-5 parchment-highlight">
-            <h3 class="paragraph-header">Qui sommes-nous ?</h3>
-            <p class="w-full my-auto">
-              Les Héritiers de Dumnacus sont une association de Jeux de Rôles
-              située à Angers. Notre mission : partager notre passion en
-              réunissant des joueurs de tous niveaux, et faire découvrir ce
-              loisir à un public curieux lors d’événements ouverts à tous.
-            </p>
-          </div><br />
+          <InfoCard className="w-5/12 mx-5" heading="Qui sommes-nous ?" itemprop="description">
+            Les Héritiers de Dumnacus sont une association de Jeux de Rôles
+            située à Angers. Notre mission : partager notre passion en
+            réunissant des joueurs de tous niveaux, et faire découvrir ce
+            loisir à un public curieux lors d’événements ouverts à tous.
+          </InfoCard><br />
 
-          <div
-            itemprop="isAccessibleForFree"
-            class="w-5/12 mx-5 parchment-highlight"
-          >
-            <h3 class="paragraph-header">
-              Vous êtes novice et n'osez pas franchir le pas ?
-            </h3>
-            <p class="w-full my-auto">
+
+          <InfoCard className="w-5/12 mx-5" heading="Vous êtes novice et n'osez pas franchir le pas ?" itemprop="isAccessibleForFree">
               <span class="font-bold">Pas besoin d’adhérer tout de suite</span> :
               vous pouvez venir essayer
               <span class="font-bold">gratuitement durant trois séances</span>,
               sans engagement. C’est notre façon de vous accueillir comme il se
               doit dans l’univers du jeu de rôle.
-            </p>
-          </div><br />
+          </InfoCard><br />
 
-          <div itemprop="priceRange" class="parchment-highlight">
-            <h3 class="paragraph-header">
-              Le coût de l'adhésion vous effraie ?
-            </h3>
+          <InfoCard className="w-5/12 mx-5" heading="Le coût de l'adhésion vous effraie ?" itemprop="priceRange">
             <div class="my-auto">
               <p class="w-full">
                 L'adhésion ne coûte que <span class="font-bold">20€ par an</span
@@ -99,7 +87,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
                 <li>et d’une communauté chaleureuse et passionnée.</li>
               </ul>
             </div>
-          </div><br />
+          </InfoCard><br />
         </AlignedItems>
         <br />
         <AlignedItems>
