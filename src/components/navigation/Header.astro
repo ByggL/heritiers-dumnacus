@@ -1,0 +1,65 @@
+---
+import HeaderLink from "../HeaderLink.astro";
+import Hamburger from "../Hamburger.astro";
+import { SHORT_SITE_TITLE } from "../../consts";
+---
+
+<header class="fixed m-0 w-full p-4 text-hOrange backdrop-blur-md">
+  <nav class="desktop flex flex-row items-center justify-between">
+    <div class="flex flex-row">
+      <img
+        src="/bouclier2png.png"
+        alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
+        id="bouclier-logo"
+      />
+      <h2
+        class="carved-text mb-auto mt-auto font-rotis text-[3vw] font-bold leading-tight"
+        data-text={SHORT_SITE_TITLE}
+      >
+        <a href="/">{SHORT_SITE_TITLE}</a>
+      </h2>
+    </div>
+    <div class="internal-links carved-text font-richard">
+      <HeaderLink href="/">Accueil</HeaderLink>
+      <HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
+      <HeaderLink href="/jeuxderole">Jeux de Rôle</HeaderLink>
+      <HeaderLink href="https://heritiers-dumnacus.forumactif.org/" target="_blank">Forum</HeaderLink>
+    </div>
+  </nav>
+  <div id="hamburger">
+    <Hamburger />
+  </div>
+</header>
+
+<style>
+  @media screen and (max-width: 600px) {
+    .desktop {
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    #hamburger {
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+  }
+
+  nav a {
+    padding: 1em 0.5em;
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+  nav a.active {
+    text-decoration: none;
+    border-bottom-color: #222939;
+  }
+</style>

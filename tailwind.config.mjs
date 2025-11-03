@@ -16,6 +16,7 @@ export default {
       richardbold: "Poor Richard Bold",
       pandion: "Pandion",
       balgruf: "Balgruf",
+      droid: "Droid Sans",
     },
   },
   plugins: [],

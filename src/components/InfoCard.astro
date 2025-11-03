@@ -10,9 +10,9 @@ interface Props {
 const { className, heading, itemprop } = Astro.props;
 ---
 
-<div itemprop="description" class:list={['parchment-highlight', className]} {itemprop}>
+<div itemprop="description" class:list={["parchment-highlight", className]} {itemprop}>
   <h3 class="paragraph-header">{heading}</h3>
-  <div class="w-full my-auto">
-    <slot/>
+  <div class="my-auto w-full">
+    <slot />
   </div>
 </div>

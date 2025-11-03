@@ -9,9 +9,7 @@ import AlignedItems from "../../components/AlignedItems.astro";
 import ImageCard from "../../components/ImageCard.astro";
 import Separator from "../../components/Separator.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <!doctype html>
@@ -89,9 +87,7 @@ const posts = (await getCollection("blog")).sort(
   <body>
     <Header />
     <main>
-      <h1 class="font-richard text-wrap text-7xl text-center mb-[5%]">
-        Nos Jeux de Rôle
-      </h1>
+      <h1 class="mb-[5%] text-wrap text-center font-richard text-7xl">Nos Jeux de Rôle</h1>
       <section>
         <AlignedItems>
           <ImageCard
@@ -99,21 +95,13 @@ const posts = (await getCollection("blog")).sort(
             image="/rpg/wg.jpg"
             alt="Image de couverture du jeu de rôle Wrath and Glory"
           />
-          <ImageCard
-            text="Fallout 111"
-            image="/rpg/fallout.jpg"
-            alt="Image de couverture du jeu de rôle Fallout 111"
-          />
+          <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" alt="Image de couverture du jeu de rôle Fallout 111" />
           <ImageCard
             text="Vampire la Mascarade"
             image="/rpg/vampire.png"
             alt="Image de couverture du jeu de rôle Vampire la Mascarade"
           />
-          <ImageCard
-            text="Donjon de Poche"
-            image="/rpg/donjondepoche.jpg"
-            alt="Image du jeu rôle Donjon de Poche"
-          />
+          <ImageCard text="Donjon de Poche" image="/rpg/donjondepoche.jpg" alt="Image du jeu rôle Donjon de Poche" />
         </AlignedItems>
         <br />
         <AlignedItems>
@@ -122,21 +110,13 @@ const posts = (await getCollection("blog")).sort(
             image="/rpg/DnD-Emblem.png"
             alt="Logo du jeu de rôle Donjons et Dragons"
           />
-          <ImageCard
-            text="Earthdawn"
-            image="/rpg/earthdawn.jpg"
-            alt="Image de couverture du jeu de rôle Earthdawn"
-          />
+          <ImageCard text="Earthdawn" image="/rpg/earthdawn.jpg" alt="Image de couverture du jeu de rôle Earthdawn" />
           <ImageCard
             text="Aventuriers de l'Âge Atlante"
             image="/rpg/ageatlante.jpg"
             alt="Illustration pour le jeu de rôle Aventuriers de l'Âge Atlante"
           />
-          <ImageCard
-            text="Zombies"
-            image="/rpg/zombies.png"
-            alt="Image de couverture du jeu de rôle Zombies"
-          />
+          <ImageCard text="Zombies" image="/rpg/zombies.png" alt="Image de couverture du jeu de rôle Zombies" />
         </AlignedItems>
         <!-- <Separator /> -->
       </section>
