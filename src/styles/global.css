@@ -201,7 +201,7 @@ a:hover {
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("tavern.png") top / cover; */
   width: 100%;
-  height: 60rem;
+  height: 50rem;
   padding-top: 5rem;
 }
 

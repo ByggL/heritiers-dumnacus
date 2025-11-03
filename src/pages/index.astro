@@ -10,6 +10,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import InfoCard from "../components/InfoCard.astro";
 import Main from "../components/navigation/Main.astro";
 import Body from "../components/navigation/Body.astro";
+import HeadingBox from "../components/HeadingBox.astro";
 ---
 
 <!doctype html>
@@ -31,11 +32,11 @@ import Body from "../components/navigation/Body.astro";
           Et si pour une fois, c'était vous le Héros ?
         </h1>
       </div>
-      <Separator />
       <div class="margin w-full" itemscope itemprop="https://schema.org/LocalBusiness">
-        <h1 class="text-bold mt-[3%] text-center font-richard text-4xl">
-          Bienvenue chez les <span class="text-5xl">H</span>éritiers de <span class="text-5xl">D</span>umnacus !
-        </h1><br />
+
+        <HeadingBox>Bienvenue chez les <span class="text-5xl">H</span>éritiers de <span class="text-5xl">D</span>umnacus !</HeadingBox>
+
+        <br /><br /><br />
 
         <AlignedItems>
           <InfoCard className="mx-5 w-5/12" heading="Qui sommes-nous ?" itemprop="description">
@@ -146,13 +147,7 @@ import Body from "../components/navigation/Body.astro";
         </AlignedItems>
       </div>
     </Main>
-    <div
-      class="margin relative mt-[5%] w-11/12 border-[3px] text-center font-rotis text-[3vw] drop-shadow-lg"
-      style="background-color: rgba(117, 186, 3, 0.7);"
-    >
-      <img src="art-deco-frame.svg" alt="" class="absolute inset-0 z-0 h-full w-full object-cover" />
-      <span class="relative z-10">En ce moment sur nos tables</span>
-    </div>
+    <HeadingBox>En ce moment sur nos tables</HeadingBox>
     <br />
     <div class="align-mobile margin mt-10 w-10/12">
       <AlignedItems>
