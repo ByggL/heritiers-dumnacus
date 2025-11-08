@@ -1,17 +1,15 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* =========================
+   Theme variables
+   ========================= */
 :root {
-  --accent: #2337ff;
-  --accent-dark: #000d8a;
-  --black: 15, 18, 25;
-  --gray: 96, 115, 159;
+  --accent: oklch(0.4958 0.2835 266.99);
+  --accent-dark: oklch(0.2966 0.1914 264.21);
+  --black: oklch(0.1824 0.0152 266.74);
+  --gray: oklch(0.5582 0.0724 266.12);
   --gray-light: 229, 233, 240;
   --gray-dark: 34, 41, 57;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
@@ -97,19 +95,7 @@ a {
   text-decoration: underline;
 }
 
-a:hover {
-  color: #ffb347;
-  text-shadow: 0 0 5px #d68016;
-}
-
-@media (max-width: 720px) {
-  body {
-    font-size: 18px;
-  }
-  main {
-    padding: 1em;
-  }
-}
+/* ===== UTILITIES ===== */
 
 .sr-only {
   border: 0;
@@ -141,93 +127,80 @@ a:hover {
   font-weight: 800;
 }
 
-@media screen and (max-width: 600px) {
-  .parchment-highlight {
-    display: flex;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: saturate(200%);
-    padding: 8px;
-    border-radius: 8px;
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-    box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    width: 100%;
-    align-self: center;
-    z-index: 10;
-  }
-}
-@media screen and (min-width: 600px) {
-  .parchment-highlight {
-    background-image: url("/public/woodboard.png");
-    background-size: contain;
-    backdrop-filter: brightness(60%);
-    padding: 8px 64px 8px 64px;
-    /* border-radius: 8px; */
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-    box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-    margin-left: 32px;
-    margin-right: 32px;
-    margin-bottom: 50px;
-    width: 41.666667%;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
-    position: relative;
-    border: 3px solid gray;
-    border-radius: 10px;
-  }
-}
-
-.parchment-highlight img {
-  z-index: -10;
-  overflow: hidden;
-  position: absolute;
-  inset: 0;
-  transform: rotate(90deg);
-  width: 35%;
-  margin: -40% auto;
-  transform-box: fill-box;
-  transform-origin: center;
-  aspect-ratio: 1/3;
-  filter: brightness(0) saturate(100%) invert(80%) sepia(64%) saturate(1298%) hue-rotate(359deg) brightness(104%)
-    contrast(104%);
-}
+/* ===== COMPONENTS ===== */
 
 .hero {
-  /* background:
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("tavern.png") top / cover; */
   width: 100%;
   height: 50rem;
   padding-top: 5rem;
 }
 
-.carved-text {
-  /* font-family: "Cinzel", serif; */
-  font-weight: 700;
-  color: orange;
-  background: inherit;
-  position: relative;
-  text-shadow:
-    1px 1px 1px rgba(255, 255, 255, 0.2),
-    /* highlight edge */ -2px -1px 1px rgba(0, 0, 0, 0.6); /* inner shadow */
-  -webkit-background-clip: text;
-  background-clip: text;
+.woodboard-header {
+  background-image: url("/public/woodboard.png");
+  background-size: contain;
+  backdrop-filter: brightness(60%);
+  padding: 8px 24px 8px 24px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+  box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  border: 3px solid gray;
+  border-radius: 24px;
+  color: white;
 }
 
-/* Optional: darker surface effect behind text */
-/* .carved-text::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: rgba(0, 0, 0, 0.3);
-  filter: blur(1px);
-  z-index: -1;
-} */
+/* Parchment highlight — common properties, then media overrides */
+.parchment-highlight {
+  display: flex;
+  flex-direction: column;
+
+  padding: 8px;
+
+  background-image: url("/public/woodboard.png");
+  background-size: contain;
+  backdrop-filter: brightness(60%);
+
+  border: 3px solid gray;
+  border-radius: 24px;
+
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+  box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+
+  z-index: 10;
+}
+
+/* ===== RESPONSIVE ADJUSTEMENTS ===== */
+
+@media (max-width: 720px) {
+  body {
+    font-size: 18px;
+  }
+  main {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .parchment-highlight {
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 100%;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .parchment-highlight {
+    padding: 8px 64px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 50px;
+    width: 41.666667%;
+    position: relative;
+  }
+}
 
 #bouclier-logo {
   /* filter: drop-shadow(5px 5px 10px #000000); */

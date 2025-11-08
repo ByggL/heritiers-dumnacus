@@ -2,24 +2,22 @@
 import HeaderLink from "../HeaderLink.astro";
 import Hamburger from "../Hamburger.astro";
 import { SHORT_SITE_TITLE } from "../../consts";
+import "../../styles/global.css";
 ---
 
-<header class="fixed top-0 w-full p-4 text-hOrange backdrop-blur-lg z-20">
-  <nav class="desktop flex flex-row items-center justify-between">
-    <div class="flex flex-row">
+<header class="fixed top-0 z-20 w-full p-4 text-white">
+  <nav class="desktop flex flex-row items-center justify-between backdrop-blur-lg">
+    <div class="woodboard-header">
       <img
         src="/bouclier2png.png"
         alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
         id="bouclier-logo"
       />
-      <h2
-        class="carved-text mb-auto mt-auto font-rotis text-[3vw] font-bold leading-tight"
-        data-text={SHORT_SITE_TITLE}
-      >
+      <h2 class="mb-auto mt-auto font-rotis text-[3vw] font-bold leading-tight" data-text={SHORT_SITE_TITLE}>
         <a href="/">{SHORT_SITE_TITLE}</a>
       </h2>
     </div>
-    <div class="internal-links carved-text font-richard">
+    <div class="woodboard-header font-richard">
       <HeaderLink href="/">Accueil</HeaderLink>
       <HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
       <HeaderLink href="/jeuxderole">Jeux de Rôle</HeaderLink>
