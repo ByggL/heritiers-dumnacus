@@ -3,21 +3,32 @@ import HeaderLink from "../HeaderLink.astro";
 import Hamburger from "../Hamburger.astro";
 import { SHORT_SITE_TITLE } from "../../consts";
 import "../../styles/global.css";
+import Image from "astro/components/Image.astro";
+import bouclierImage from "../../../public/bouclier2png.png";
 ---
 
-<header class="fixed top-0 z-20 w-full p-4 text-white">
+<header class="fixed top-0 z-20 w-full p-4">
   <nav class="desktop flex flex-row items-center justify-between backdrop-blur-lg">
     <div class="woodboard-header">
-      <img
+      <!-- <img
         src="/bouclier2png.png"
         alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
         id="bouclier-logo"
+      /> -->
+      <Image
+        src={bouclierImage}
+        alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
+        id="bouclier-logo"
       />
-      <h2 class="mb-auto mt-auto font-rotis text-[3vw] font-bold leading-tight" data-text={SHORT_SITE_TITLE}>
+      <h2
+        class="my-auto items-center self-center pt-3 font-rotis text-[3vw] font-bold"
+        data-text={SHORT_SITE_TITLE}
+        aria-label={SHORT_SITE_TITLE}
+      >
         <a href="/">{SHORT_SITE_TITLE}</a>
       </h2>
     </div>
-    <div class="woodboard-header font-richard">
+    <div class="woodboard-header navigation-links font-richard">
       <HeaderLink href="/">Accueil</HeaderLink>
       <HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
       <HeaderLink href="/jeuxderole">Jeux de Rôle</HeaderLink>
@@ -48,15 +59,18 @@ import "../../styles/global.css";
   h2 a,
   h2 a.active {
     text-decoration: none;
+    padding-left: 0.5em;
+    line-height: 1;
   }
 
-  nav a {
+  .navigation-links a {
     padding: 1em 0.5em;
-    color: var(--black);
+    /* color: var(--black); */
     border-bottom: 4px solid transparent;
     text-decoration: none;
+    display: inline-block;
   }
-  nav a.active {
+  .navigation-links a.active {
     text-decoration: none;
     border-bottom-color: #222939;
   }
