@@ -19,134 +19,132 @@ import HeadingBox from "../components/HeadingBox.astro";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} canonicalURL="https://www.heritiersdedumnacus.fr" />
   </head>
   <Body>
-    <Header />
-    <Main>
-      <div class="hero flex w-full flex-col p-10">
-        <img
-          src="/bouclierbig.png"
-          alt="bannière"
-          id="bouclier-big"
-          alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
-        />
-        <h1 class="m-auto text-wrap text-center font-richard text-[4vw] text-white">
-          Et si pour une fois, c'était vous le Héros ?
-        </h1>
-      </div>
-      <div class="margin w-full" itemscope itemprop="https://schema.org/LocalBusiness">
+    <div class="hero flex w-full flex-col p-10">
+      <img
+        src="/bouclierbig.png"
+        alt="bannière"
+        id="bouclier-big"
+        alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
+      />
+      <h1 class="m-auto text-wrap text-center font-richard text-[4vw] text-white">
+        Et si pour une fois, c'était vous le Héros ?
+      </h1>
+    </div>
+    <div class="margin w-full" itemscope itemprop="https://schema.org/LocalBusiness">
+      <HeadingBox
+        >Bienvenue chez les <span class="text-5xl">H</span>éritiers de <span class="text-5xl">D</span>umnacus !</HeadingBox
+      >
 
-        <HeadingBox>Bienvenue chez les <span class="text-5xl">H</span>éritiers de <span class="text-5xl">D</span>umnacus !</HeadingBox>
+      <br /><br /><br />
 
-        <br /><br /><br />
+      <AlignedItems>
+        <InfoCard className="mx-5 w-5/12" heading="Qui sommes-nous ?" itemprop="description">
+          Les Héritiers de Dumnacus sont une association de Jeux de Rôles située à Angers. Notre mission : partager
+          notre passion en réunissant des joueurs de tous niveaux, et faire découvrir ce loisir à un public curieux lors
+          d’événements ouverts à tous.
+        </InfoCard><br />
 
-        <AlignedItems>
-          <InfoCard className="mx-5 w-5/12" heading="Qui sommes-nous ?" itemprop="description">
-            Les Héritiers de Dumnacus sont une association de Jeux de Rôles située à Angers. Notre mission : partager
-            notre passion en réunissant des joueurs de tous niveaux, et faire découvrir ce loisir à un public curieux
-            lors d’événements ouverts à tous.
-          </InfoCard><br />
+        <InfoCard
+          className="mx-5 w-5/12"
+          heading="Vous êtes novice et n'osez pas franchir le pas ?"
+          itemprop="isAccessibleForFree"
+        >
+          <span class="font-bold">Pas besoin d’adhérer tout de suite</span> : vous pouvez venir essayer
+          <span class="font-bold">gratuitement durant trois séances</span>, sans engagement. C’est notre façon de vous
+          accueillir comme il se doit dans l’univers du jeu de rôle.
+        </InfoCard><br />
 
-          <InfoCard
-            className="mx-5 w-5/12"
-            heading="Vous êtes novice et n'osez pas franchir le pas ?"
-            itemprop="isAccessibleForFree"
-          >
-            <span class="font-bold">Pas besoin d’adhérer tout de suite</span> : vous pouvez venir essayer
-            <span class="font-bold">gratuitement durant trois séances</span>, sans engagement. C’est notre façon de vous
-            accueillir comme il se doit dans l’univers du jeu de rôle.
-          </InfoCard><br />
+        <InfoCard className="mx-5 w-5/12" heading="Le coût de l'adhésion vous effraie ?" itemprop="priceRange">
+          <div class="my-auto">
+            <p class="w-full">
+              L'adhésion ne coûte que <span class="font-bold">20€ par an</span> et seulement <span class="font-bold"
+                >15€ pour les étudiants</span
+              >. <br />
+              En devenant membre, vous profitez :
+            </p>
+            <ul class="ml-6 list-disc">
+              <li>de l’accès à toutes nos parties,</li>
+              <li>de réductions chez nos boutiques partenaires,</li>
+              <li>et d’une communauté chaleureuse et passionnée.</li>
+            </ul>
+          </div>
+        </InfoCard><br />
+      </AlignedItems>
+      <br />
+      <AlignedItems>
+        <div itemprop="address" class="parchment-highlight">
+          <!-- <img
+              src="art-deco-frame.svg#svgView(preserveAspectRatio(none))"
+              alt=""
+            /> -->
+          <div>
+            <h3 class="paragraph-header">Où nous trouver ?</h3>
+            <p class="my-auto w-full">
+              Venez nous retrouver au <span class="font-bold">12 rue Louis Boiramé, 49000 Angers</span>, dans la
+              résidence Arceau.<br />
+              Sur place vous pourrez nous trouver via l'entrée accessible en faisant le tour du bâtiment par le square Louis
+              Boisramé. Un de nos membres viendra vous ouvrir.
+            </p>
+          </div>
+        </div><br />
 
-          <InfoCard className="mx-5 w-5/12" heading="Le coût de l'adhésion vous effraie ?" itemprop="priceRange">
+        <div itemprop="event" class="parchment-highlight">
+          <!-- <img
+              src="art-deco-frame.svg#svgView(preserveAspectRatio(none))"
+              alt=""
+            /> -->
+          <div>
+            <h3 class="paragraph-header">Quand est-ce qu'on joue ?</h3>
             <div class="my-auto">
-              <p class="w-full">
-                L'adhésion ne coûte que <span class="font-bold">20€ par an</span> et seulement <span class="font-bold"
-                  >15€ pour les étudiants</span
-                >. <br />
-                En devenant membre, vous profitez :
-              </p>
+              <p class="w-full">Nous organisons des parties chaque week-end :</p>
               <ul class="ml-6 list-disc">
-                <li>de l’accès à toutes nos parties,</li>
-                <li>de réductions chez nos boutiques partenaires,</li>
-                <li>et d’une communauté chaleureuse et passionnée.</li>
+                <li>le samedi soir</li>
+                <li>et le dimanche après-midi</li>
               </ul>
-            </div>
-          </InfoCard><br />
-        </AlignedItems>
-        <br />
-        <AlignedItems>
-          <div itemprop="address" class="parchment-highlight">
-            <!-- <img
-              src="art-deco-frame.svg#svgView(preserveAspectRatio(none))"
-              alt=""
-            /> -->
-            <div>
-              <h3 class="paragraph-header">Où nous trouver ?</h3>
-              <p class="my-auto w-full">
-                Venez nous retrouver au <span class="font-bold">12 rue Louis Boiramé, 49000 Angers</span>, dans la
-                résidence Arceau.<br />
-                Sur place vous pourrez nous trouver via l'entrée accessible en faisant le tour du bâtiment par le square
-                Louis Boisramé. Un de nos membres viendra vous ouvrir.
-              </p>
-            </div>
-          </div><br />
-
-          <div itemprop="event" class="parchment-highlight">
-            <!-- <img
-              src="art-deco-frame.svg#svgView(preserveAspectRatio(none))"
-              alt=""
-            /> -->
-            <div>
-              <h3 class="paragraph-header">Quand est-ce qu'on joue ?</h3>
-              <div class="my-auto">
-                <p class="w-full">Nous organisons des parties chaque week-end :</p>
-                <ul class="ml-6 list-disc">
-                  <li>le samedi soir</li>
-                  <li>et le dimanche après-midi</li>
-                </ul>
-                <p class="w-full">
-                  selon les propositions des meneurs et les disponibilités des joueurs.<br />
-                  Vous pouvez consulter et discuter de la prochaine partie sur notre
-                  <a href="https://heritiers-dumnacus.forumactif.org/" target="_blank" class="font-bold underline"
-                    >forum</a
-                  > !
-                </p>
-              </div>
-            </div>
-          </div>
-        </AlignedItems>
-        <br />
-        <AlignedItems>
-          <div itemprop="event" class="parchment-highlight">
-            <h3 class="paragraph-header">Je veux essayer ! Je fais comment ?</h3>
-            <div class="my-auto">
               <p class="w-full">
-                Tout le monde est le bienvenu, novice comme vétéran ! Pour vous inscrire à une partie :
+                selon les propositions des meneurs et les disponibilités des joueurs.<br />
+                Vous pouvez consulter et discuter de la prochaine partie sur notre
+                <a href="https://heritiers-dumnacus.forumactif.org/" target="_blank" class="font-bold underline"
+                  >forum</a
+                > !
               </p>
-              <ul class="ml-6 list-decimal">
-                <li>
-                  Rendez-vous sur notre <a
-                    href="https://heritiers-dumnacus.forumactif.org/"
-                    target="_blank"
-                    class="font-bold underline">forum</a
-                  >.
-                </li>
-                <li>Trouvez la partie qui vous intéresse.</li>
-                <li>
-                  Indiquez votre présence dans le sujet correspondant (ou via <a href="https://discord.gg/4qdqpWbYdA"
-                    >Discord</a
-                  > si c’est plus simple pour vous).
-                </li>
-              </ul>
-              <i
-                ><small
-                  >Note : certaines de nos parties sont pour un public <b>adulte</b>, pensez à vérifier si la partie est
-                  ouverte aux plus jeunes si vous êtes mineur.</small
-                ></i
-              >
             </div>
           </div>
-        </AlignedItems>
-      </div>
-    </Main>
+        </div>
+      </AlignedItems>
+      <br />
+      <AlignedItems>
+        <div itemprop="event" class="parchment-highlight">
+          <h3 class="paragraph-header">Je veux essayer ! Je fais comment ?</h3>
+          <div class="my-auto">
+            <p class="w-full">
+              Tout le monde est le bienvenu, novice comme vétéran ! Pour vous inscrire à une partie :
+            </p>
+            <ul class="ml-6 list-decimal">
+              <li>
+                Rendez-vous sur notre <a
+                  href="https://heritiers-dumnacus.forumactif.org/"
+                  target="_blank"
+                  class="font-bold underline">forum</a
+                >.
+              </li>
+              <li>Trouvez la partie qui vous intéresse.</li>
+              <li>
+                Indiquez votre présence dans le sujet correspondant (ou via <a href="https://discord.gg/4qdqpWbYdA"
+                  >Discord</a
+                > si c’est plus simple pour vous).
+              </li>
+            </ul>
+            <i
+              ><small
+                >Note : certaines de nos parties sont pour un public <b>adulte</b>, pensez à vérifier si la partie est
+                ouverte aux plus jeunes si vous êtes mineur.</small
+              ></i
+            >
+          </div>
+        </div>
+      </AlignedItems>
+    </div>
     <HeadingBox>En ce moment sur nos tables</HeadingBox>
     <br />
     <div class="align-mobile margin mt-10 w-10/12">
@@ -180,7 +178,5 @@ import HeadingBox from "../components/HeadingBox.astro";
       </AlignedItems>
       <br />
     </div>
-
-    <Footer />
   </Body>
 </html>

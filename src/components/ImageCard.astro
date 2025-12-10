@@ -48,12 +48,16 @@ const { text, image = "/bouclier2png.png", alt } = Astro.props;
   }
 
   img {
-    transition: transform 0.15s ease-in-out;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
+    border: 3px solid gray;
   }
 
-  img:hover {
+  #wrapper {
+    transition: transform 0.15s ease-in-out;
+  }
+
+  #wrapper:hover {
     transform: scale(1.05);
   }
 </style>
