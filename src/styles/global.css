@@ -125,6 +125,8 @@ a {
   line-height: 2rem;
   font-family: "Poor Richard", serif;
   font-weight: 800;
+  text-wrap: pretty;
+  text-align: center;
 }
 
 /* ===== COMPONENTS ===== */
@@ -189,6 +191,23 @@ a {
     width: 100%;
     align-self: center;
   }
+
+  .slogan {
+    margin: auto;
+    text-wrap: wrap;
+    text-align: center;
+    font-family: "Poor Richard";
+    font-size: 250%;
+    color: white;
+    line-height: normal;
+  }
+
+  #bouclier-big {
+    filter: drop-shadow(10px 10px 20px #000000);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -200,6 +219,22 @@ a {
     width: 41.666667%;
     position: relative;
   }
+
+  .slogan {
+    margin: auto;
+    text-wrap: wrap;
+    text-align: center;
+    font-family: "Poor Richard";
+    font-size: 4vw;
+    color: white;
+  }
+
+  #bouclier-big {
+    filter: drop-shadow(10px 10px 20px #000000);
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 #bouclier-logo {
@@ -208,11 +243,4 @@ a {
   width: auto;
   margin-top: auto;
   margin-bottom: auto;
-}
-
-#bouclier-big {
-  filter: drop-shadow(10px 10px 20px #000000);
-  width: 40%;
-  margin-right: auto;
-  margin-left: auto;
 }

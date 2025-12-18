@@ -1,14 +1,11 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/navigation/Header.astro";
-import Footer from "../components/navigation/Footer.astro";
 import ImageCard from "../components/ImageCard.astro";
 import ImageLinkCard from "../components/ImageLinkCard.astro";
 import AlignedItems from "../components/navigation/AlignedItems.astro";
 import Separator from "../components/Separator.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import InfoCard from "../components/InfoCard.astro";
-import Main from "../components/navigation/Main.astro";
 import Body from "../components/navigation/Body.astro";
 import HeadingBox from "../components/HeadingBox.astro";
 ---
@@ -26,9 +23,7 @@ import HeadingBox from "../components/HeadingBox.astro";
         id="bouclier-big"
         alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
       />
-      <h1 class="m-auto text-wrap text-center font-richard text-[4vw] text-white">
-        Et si pour une fois, c'était vous le Héros ?
-      </h1>
+      <h1 class="slogan">Et si pour une fois, c'était vous le Héros ?</h1>
     </div>
     <div class="margin w-full" itemscope itemprop="https://schema.org/LocalBusiness">
       <HeadingBox

@@ -5,3 +5,16 @@
   <!-- <img src="art-deco-frame.svg" alt="" class="absolute inset-0 z-0 h-full w-full object-cover" /> -->
   <span class="relative z-10"><slot /></span>
 </div>
+
+<style>
+  @media screen and (max-width: 600px) {
+    div {
+      font-size: xx-large;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    div {
+      font-size: 3vw;
+    }
+  }
+</style>
