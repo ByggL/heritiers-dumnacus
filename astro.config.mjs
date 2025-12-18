@@ -11,5 +11,7 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   site: "https://www.heritiersdedumnacus.fr/",
   integrations: [mdx(), sitemap(), tailwind()],
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: "compile", // Optimizes during build, compatible with CF
+  }),
 });

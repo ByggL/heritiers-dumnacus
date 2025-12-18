@@ -1,13 +1,9 @@
 ---
 import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/navigation/Header.astro";
-import Footer from "../../components/navigation/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
 import AlignedItems from "../../components/navigation/AlignedItems.astro";
 import ImageCard from "../../components/ImageCard.astro";
-import Separator from "../../components/Separator.astro";
 import Body from "../../components/navigation/Body.astro";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -86,36 +82,46 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
     </style>
   </head>
   <Body>
-    <h1 class="mb-[5%] text-wrap text-center font-richard text-7xl">Nos Jeux de Rôle</h1>
-    <section>
-      <AlignedItems>
-        <ImageCard text="Wrath & Glory" image="/rpg/wg.jpg" alt="Image de couverture du jeu de rôle Wrath and Glory" />
-        <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" alt="Image de couverture du jeu de rôle Fallout 111" />
-        <ImageCard
-          text="Vampire la Mascarade"
-          image="/rpg/vampire.png"
-          alt="Image de couverture du jeu de rôle Vampire la Mascarade"
-        />
-        <ImageCard text="Donjon de Poche" image="/rpg/donjondepoche.jpg" alt="Image du jeu rôle Donjon de Poche" />
-      </AlignedItems>
-      <br />
-      <AlignedItems>
-        <ImageCard
-          text="Donjons et Dragons 5e"
-          image="/rpg/DnD-Emblem.png"
-          alt="Logo du jeu de rôle Donjons et Dragons"
-        />
-        <ImageCard text="Earthdawn" image="/rpg/earthdawn.jpg" alt="Image de couverture du jeu de rôle Earthdawn" />
-        <ImageCard
-          text="Aventuriers de l'Âge Atlante"
-          image="/rpg/ageatlante.jpg"
-          alt="Illustration pour le jeu de rôle Aventuriers de l'Âge Atlante"
-        />
-        <ImageCard text="Zombies" image="/rpg/zombies.png" alt="Image de couverture du jeu de rôle Zombies" />
-      </AlignedItems>
-      <!-- <Separator /> -->
-    </section>
-    <!-- <section>
+    <div class="w-9/10 mx-10 mb-10">
+      <h1
+        class="margin text-bold rounded-lg border-[3px] p-6 text-center font-richard text-6xl drop-shadow-lg"
+        style="background-color: rgba(117, 186, 3, 0.7);"
+      >
+        Nos Jeux de Rôle
+      </h1><br />
+      <section>
+        <AlignedItems>
+          <ImageCard
+            text="Wrath & Glory"
+            image="/rpg/wg.jpg"
+            alt="Image de couverture du jeu de rôle Wrath and Glory"
+          />
+          <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" alt="Image de couverture du jeu de rôle Fallout 111" />
+          <ImageCard
+            text="Vampire la Mascarade"
+            image="/rpg/vampire.png"
+            alt="Image de couverture du jeu de rôle Vampire la Mascarade"
+          />
+          <ImageCard text="Donjon de Poche" image="/rpg/donjondepoche.jpg" alt="Image du jeu rôle Donjon de Poche" />
+        </AlignedItems>
+        <br />
+        <AlignedItems>
+          <ImageCard
+            text="Donjons et Dragons 5e"
+            image="/rpg/DnD-Emblem.png"
+            alt="Logo du jeu de rôle Donjons et Dragons"
+          />
+          <ImageCard text="Earthdawn" image="/rpg/earthdawn.jpg" alt="Image de couverture du jeu de rôle Earthdawn" />
+          <ImageCard
+            text="Aventuriers de l'Âge Atlante"
+            image="/rpg/ageatlante.jpg"
+            alt="Illustration pour le jeu de rôle Aventuriers de l'Âge Atlante"
+          />
+          <ImageCard text="Zombies" image="/rpg/zombies.png" alt="Image de couverture du jeu de rôle Zombies" />
+        </AlignedItems>
+        <!-- <Separator /> -->
+      </section>
+      <!-- <section>
         <ul>
           {
             posts.map((post) => (
@@ -137,5 +143,6 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
           }
         </ul>
       </section> -->
+    </div>
   </Body>
 </html>

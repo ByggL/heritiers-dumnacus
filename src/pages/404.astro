@@ -1,7 +1,5 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/navigation/Header.astro";
-import Footer from "../components/navigation/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Body from "../components/navigation/Body.astro";
 ---
@@ -12,10 +10,9 @@ import Body from "../components/navigation/Body.astro";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <Body>
-    <main class="m-20">
+    <div class="m-20">
       <h1 class="text-wrap text-center font-richard text-7xl">ERREUR 404</h1>
       <h2 class="text-wrap text-center font-richard text-5xl">Page non trouvée</h2>
-    </main>
-    <Footer />
+    </div>
   </Body>
 </html>
