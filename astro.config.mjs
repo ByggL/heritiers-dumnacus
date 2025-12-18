@@ -5,8 +5,11 @@ import sitemap from "@astrojs/sitemap";
 
 import tailwind from "@astrojs/tailwind";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.heritiersdedumnacus.fr/",
   integrations: [mdx(), sitemap(), tailwind()],
+  adapter: cloudflare(),
 });
