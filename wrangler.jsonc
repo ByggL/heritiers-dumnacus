@@ -3,10 +3,10 @@
   "name": "heritiers-dumnacus",
   "compatibility_date": "2025-12-19",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
-  "assets": {
-    "binding": "ASSETS",
-    "directory": "./dist"
-  },
+  // "assets": {
+  //   "binding": "ASSETS",
+  //   "directory": "./dist"
+  // },
   "observability": {
     "enabled": true
   },
