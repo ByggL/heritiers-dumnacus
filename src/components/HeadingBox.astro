@@ -1,20 +1,9 @@
 <div
-  class="margin relative mt-[5%] w-11/12 rounded-lg border-[3px] p-6 text-center font-rotis text-[3vw] drop-shadow-lg"
-  style="background-color: rgba(117, 186, 3, 0.7);"
+  class="margin relative my-12 w-full rounded-xl border-2 border-[var(--color-gold)] p-8 text-center drop-shadow-2xl"
+  style="background-color: rgba(0, 74, 153, 0.85); box-shadow: 0 10px 40px rgba(0,0,0,0.5);"
 >
-  <!-- <img src="art-deco-frame.svg" alt="" class="absolute inset-0 z-0 h-full w-full object-cover" /> -->
-  <span class="relative z-10"><slot /></span>
+  <div class="absolute inset-0 z-0 opacity-20 bg-[url('/textures/wood_plank.jpg')] bg-cover rounded-xl"></div>
+  <h2 class="relative z-10 font-richard text-4xl md:text-5xl lg:text-6xl text-white drop-shadow-md">
+    <slot />
+  </h2>
 </div>
-
-<style>
-  @media screen and (max-width: 600px) {
-    div {
-      font-size: xx-large;
-    }
-  }
-  @media screen and (min-width: 600px) {
-    div {
-      font-size: 3vw;
-    }
-  }
-</style>

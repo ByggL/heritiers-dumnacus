@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {},
     colors: {
-      hOrange: "#F19401",
-      hGreen: "#75BA03",
+      hGold: "#d4af37",
+      hBlue: "#004a99",
       hGrey: "#D1D7DA",
       white: "#FFFFFF",
       black: "#000000",

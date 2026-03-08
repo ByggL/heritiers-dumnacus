@@ -3,77 +3,123 @@ import HeaderLink from "../HeaderLink.astro";
 import Hamburger from "../Hamburger.astro";
 import { SHORT_SITE_TITLE } from "../../consts";
 import "../../styles/global.css";
-import Image from "astro/components/Image.astro";
-import bouclierImage from "../../../public/bouclier2png.png";
 ---
 
-<header class="fixed top-0 z-20 w-full p-4">
-  <nav class="desktop flex flex-row items-center justify-between backdrop-blur-lg">
-    <div class="woodboard-header">
-      <img
-        src="/bouclier2png.png"
-        alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
-        id="bouclier-logo"
-      />
-
-      <!-- <Image
-        src={bouclierImage}
-        alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
-        id="bouclier-logo"
-      /> -->
-      <h2
-        class="my-auto items-center self-center font-rotis text-[3vw] font-bold"
-        data-text={SHORT_SITE_TITLE}
-        aria-label={SHORT_SITE_TITLE}
-      >
-        <a href="/">{SHORT_SITE_TITLE}</a>
+<header class="relative w-full px-8 py-10">
+  <nav class="desktop-nav container-custom relative flex items-center justify-between">
+    <!-- Tavern Sign for Logo & Title -->
+    <div class="tavern-sign tavern-sign-main flex items-center px-10 py-4">
+      <div class="sign-bracket left-bracket"></div>
+      <div class="logo-wrapper relative">
+        <img
+          src="/logo-new.png"
+          alt="Logo"
+          class="h-20 w-auto drop-shadow-2xl transition-transform hover:rotate-12"
+        />
+      </div>
+      <h2 class="ml-8 font-richard text-4xl font-bold tracking-tight text-white drop-shadow-md">
+        <a href="/" class="no-underline hover:text-[var(--color-gold-light)]">
+          <span class="font-pandion text-5xl text-[var(--color-gold)]">H</span>éritiers de 
+          <span class="font-pandion text-5xl text-[var(--color-gold)]">D</span>umnacus
+        </a>
       </h2>
     </div>
-    <div class="woodboard-header navigation-links font-richard text-xl">
+
+    <!-- Tavern Sign for Navigation -->
+    <div class="tavern-sign tavern-nav flex gap-8 px-10 py-5 font-richard text-2xl">
+      <div class="sign-bracket right-bracket"></div>
       <HeaderLink href="/">Accueil</HeaderLink>
       <HeaderLink href="/nousrejoindre">Nous Rejoindre</HeaderLink>
       <HeaderLink href="/jeuxderole">Jeux de Rôle</HeaderLink>
+      <HeaderLink href="/about">À Propos</HeaderLink>
       <HeaderLink href="https://heritiers-dumnacus.forumactif.org/" target="_blank">Forum</HeaderLink>
     </div>
   </nav>
-  <div id="hamburger">
+
+  <div id="hamburger-wrapper">
     <Hamburger />
   </div>
 </header>
 
 <style>
-  @media screen and (max-width: 600px) {
-    .desktop {
-      visibility: hidden;
-      height: 0;
-      overflow: hidden;
-    }
-  }
-  @media screen and (min-width: 600px) {
-    #hamburger {
-      visibility: hidden;
-      height: 0;
-      overflow: hidden;
-    }
+  /* Base Tavern Sign Style */
+  .tavern-sign {
+    background-image: url("/woodboard.png");
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--color-gold);
+    border-radius: 8px;
+    box-shadow: 
+      0 15px 35px rgba(0, 0, 0, 0.7),
+      inset 0 0 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+    filter: brightness(1.1) contrast(1.1);
   }
 
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-    padding-left: 0.5em;
-    line-height: 1;
+  /* Brackets (Simulating wrought iron attachment) */
+  .sign-bracket {
+    position: absolute;
+    top: -20px;
+    width: 40px;
+    height: 30px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    box-shadow: inset 0 0 10px #000;
+  }
+
+  .sign-bracket::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 20px;
+    background: linear-gradient(#111, #333);
+    border-radius: 2px;
+  }
+
+  .left-bracket { left: 40px; }
+  .right-bracket { right: 40px; }
+
+  /* Navigation Specifics */
+  .tavern-nav {
+    display: flex;
+    align-items: center;
   }
 
   .navigation-links a {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    /* color: var(--black); */
-    border-bottom: 4px solid transparent;
+    color: white;
     text-decoration: none;
-    display: inline-block;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
   }
+
+  .navigation-links a:hover {
+    color: var(--color-gold-light);
+    transform: translateY(-2px);
+  }
+
   .navigation-links a.active {
-    text-decoration: none;
-    border-bottom-color: #eee;
+    border-bottom-color: var(--color-gold-light);
+    color: var(--color-gold-light);
+  }
+
+  /* Responsive Visibility */
+  @media screen and (max-width: 1100px) {
+    .desktop-nav {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1101px) {
+    #hamburger-wrapper {
+      display: none;
+    }
+  }
+
+  /* Logo Animation */
+  .logo-wrapper img {
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.3));
   }
 </style>

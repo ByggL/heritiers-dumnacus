@@ -6,14 +6,21 @@
    Theme variables
    ========================= */
 :root {
-  --accent: oklch(0.4958 0.2835 266.99);
-  --accent-dark: oklch(0.2966 0.1914 264.21);
-  --black: oklch(0.1824 0.0152 266.74);
-  --gray: oklch(0.5582 0.0724 266.12);
+  --color-blue: #004a99;
+  --color-blue-dark: #003366;
+  --color-gold: #d4af37;
+  --color-gold-light: #f1d37a;
+  
+  --accent: var(--color-blue);
+  --accent-dark: var(--color-blue-dark);
+  
+  --black: #111;
+  --gray: #666;
   --gray-light: 229, 233, 240;
   --gray-dark: 34, 41, 57;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
-  --box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --text-parchment: #2d2419;
 }
 
 @font-face {
@@ -80,8 +87,9 @@
 
 h1,
 h2,
-h3 {
-  font-family: "Cinzel Decorative", serif;
+h3,
+h4 {
+  font-family: "Cinzel Decorative", "Poor Richard", serif;
   color: #eee;
   letter-spacing: 1px;
 }
@@ -93,9 +101,23 @@ p {
 a {
   font-weight: bold;
   text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-gold-light);
 }
 
 /* ===== UTILITIES ===== */
+
+.container-custom {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 
 .sr-only {
   border: 0;
@@ -105,13 +127,8 @@ a {
   height: 1px;
   width: 1px;
   overflow: hidden;
-  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
   clip: rect(1px 1px 1px 1px);
-  /* maybe deprecated but we need to support legacy browsers */
-  clip: rect(1px, 1px, 1px, 1px);
-  /* modern browsers, clip-path works inwards from each corner */
   clip-path: inset(50%);
-  /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
 }
 
@@ -121,135 +138,147 @@ a {
 }
 
 .paragraph-header {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
   font-family: "Poor Richard", serif;
   font-weight: 800;
   text-wrap: pretty;
   text-align: center;
+  color: inherit;
+  margin-bottom: 1.5rem; /* Standardized spacing below headers */
 }
 
 /* ===== COMPONENTS ===== */
 
 .hero {
   width: 100%;
-  height: 50rem;
-  padding-top: 5rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .woodboard-header {
   background-image: url("/woodboard.png");
-  background-size: contain;
+  background-size: cover;
   backdrop-filter: brightness(60%);
-  padding: 8px 24px 8px 24px;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-  box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
+  padding: 12px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: row;
-  border: 3px solid gray;
-  border-radius: 24px;
+  border: 2px solid var(--color-gold);
+  border-radius: 12px;
   color: white;
 }
 
-/* Parchment highlight — common properties, then media overrides */
+/* Real Parchment class */
+.parchment-card {
+  background-image: url("/background-parchment.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--text-parchment);
+  padding: 3rem; /* Increased and standardized padding */
+  border-radius: 4px;
+  box-shadow: 
+    0 5px 15px rgba(0,0,0,0.3),
+    inset 0 0 40px rgba(0,0,0,0.1);
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.parchment-card h1,
+.parchment-card h2,
+.parchment-card h3,
+.parchment-card h4 {
+  color: var(--text-parchment);
+}
+
+/* Parchment highlight — kept for compatibility but refined */
 .parchment-highlight {
   display: flex;
   flex-direction: column;
-
-  padding: 8px;
-
+  padding: 3rem; /* Increased and standardized padding */
   background-image: url("/woodboard.png");
-  background-size: contain;
-  backdrop-filter: brightness(60%);
-
-  border: 3px solid gray;
-  border-radius: 24px;
-
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-  box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-
+  background-size: cover;
+  border: 2px solid var(--color-gold);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 30, 60, 0.4);
   z-index: 10;
+  color: white;
 }
 
 /* ===== RESPONSIVE ADJUSTEMENTS ===== */
 
 @media (max-width: 720px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
   main {
-    padding: 1em;
+    padding: 1rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .parchment-highlight {
-    border-radius: 8px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    width: 100%;
-    align-self: center;
+  .hero {
+    height: auto;
+    padding: 4rem 1rem;
   }
 
   .slogan {
-    margin: auto;
+    margin: 2rem auto;
     text-wrap: wrap;
     text-align: center;
     font-family: "Poor Richard";
-    font-size: 250%;
+    font-size: 2rem;
     color: white;
-    line-height: normal;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
   }
 
   #bouclier-big {
     filter: drop-shadow(10px 10px 20px #000000);
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    width: 60%;
+    max-width: 250px;
   }
 }
 
 @media screen and (min-width: 600px) {
-  .parchment-highlight {
-    padding: 8px 64px;
-    margin-left: 32px;
-    margin-right: 32px;
-    margin-bottom: 50px;
-    width: 41.666667%;
-    position: relative;
-  }
-
   .slogan {
-    margin: auto;
+    margin: 2rem auto;
     text-wrap: wrap;
     text-align: center;
     font-family: "Poor Richard";
-    font-size: 4vw;
+    font-size: 3.5vw;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
   }
 
   #bouclier-big {
     filter: drop-shadow(10px 10px 20px #000000);
-    width: 40%;
-    margin-right: auto;
-    margin-left: auto;
+    width: 25%;
+    max-width: 350px;
   }
 }
 
 #bouclier-logo {
-  /* filter: drop-shadow(5px 5px 10px #000000); */
-  height: 2.5rem;
+  height: 3rem;
   width: auto;
   margin-top: auto;
   margin-bottom: auto;
+  transition: transform 0.3s ease;
+}
+
+#bouclier-logo:hover {
+  transform: rotate(5deg) scale(1.1);
 }
 
 .body-background {
-  background-simainze: 100% 600px;
-  backdrop-filter: blur(3px);
-  background:
-      /* linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), */
-    url("/tavernout.jpg") top / cover,
-    #000000;
+  background-attachment: fixed;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/tavernout.jpg");
+  background-size: cover;
+  background-position: center;
 }
+

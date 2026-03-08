@@ -12,7 +12,7 @@ const { className, heading, itemprop } = Astro.props;
 
 <div itemprop="description" class:list={["parchment-highlight", className]} {itemprop}>
   <h3 class="paragraph-header">{heading}</h3>
-  <div class="my-auto w-full">
+  <div class="w-full">
     <slot />
   </div>
 </div>

@@ -1,97 +1,76 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Body from "../components/navigation/Body.astro";
-
-const isAboutPageEnabled = import.meta.env.PUBLIC_ENABLE_ABOUT_PAGE === "true";
-
-if (!isAboutPageEnabled) {
-  return Astro.redirect("/404");
-}
+import HeadingBox from "../components/HeadingBox.astro";
+import InfoCard from "../components/InfoCard.astro";
 ---
 
+<!doctype html>
 <html lang="fr">
   <head>
-    <BaseHead
-      title="À propos | Les Héritiers de Dumnacus"
-      description="Présentation de l'association Les Héritiers de Dumnacus, club de jeux de rôle à Angers."
-      canonicalURL="https://www.heritiersdedumnacus.fr/about/"
-    />
+    <BaseHead title={`À propos - ${SITE_TITLE}`} description={SITE_DESCRIPTION} canonicalURL="https://www.heritiersdedumnacus.fr/about/" />
   </head>
-
   <Body>
-    <section class="mx-auto mt-8 w-11/12 max-w-6xl">
-      <h1
-        class="margin rounded-lg border-[3px] p-6 text-center font-richard text-6xl drop-shadow-lg"
-        style="background-color: rgba(117, 186, 3, 0.7);"
-      >
-        À propos
-      </h1>
+    <div class="container-custom py-12">
+      <HeadingBox>À Propos de Nous</HeadingBox>
 
-      <div class="about-grid mt-8">
-        <article class="parchment-highlight p-8">
-          <h2 class="paragraph-header">Qui sommes-nous ?</h2>
-          <p>
-            Les Héritiers de Dumnacus est une association angevine (loi 1901) dédiée au jeu de rôle sur table,
-            active dans le quartier des Justices à Angers. L'association accueille aussi bien les personnes qui
-            découvrent le JdR que les joueuses et joueurs expérimentés.
-          </p>
-          <p>
-            Le nom « Dumnacus » fait référence à un chef gaulois de la région andécave, un clin d'œil à l'histoire
-            locale et à l'ancrage territorial de l'association.
-          </p>
-        </article>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 my-16">
+        <div class="parchment-card">
+          <h2 class="font-richard text-4xl mb-6 text-center border-b border-black/10 pb-4">Notre Histoire</h2>
+          <div class="space-y-4 text-lg leading-relaxed">
+            <p>
+              Fondée par un groupe de passionnés, l'association <span class="font-bold text-[var(--color-blue-dark)]">Les Héritiers de Dumnacus</span> 
+              est devenue au fil des années un pilier de la culture ludique à Angers.
+            </p>
+            <p>
+              Le nom de notre club rend hommage à <span class="italic">Dumnacus</span>, chef gaulois des Andes qui lutta courageusement 
+              pour la liberté de son peuple. C'est cet esprit de camaraderie et d'aventure que nous insufflons à nos tables de jeu.
+            </p>
+            <p>
+              Nous croyons que le jeu de rôle est un puissant vecteur d'imaginaire, de lien social et de créativité, 
+              accessible à tous sans distinction.
+            </p>
+          </div>
+        </div>
 
-        <article class="parchment-highlight p-8">
-          <h2 class="paragraph-header">Nos activités</h2>
-          <p>
-            L'association organise des sessions chaque week-end, avec des parties le samedi et le dimanche,
-            généralement proposées par les meneurs et meneuses sur le forum.
-          </p>
-          <p>
-            Les jeux pratiqués couvrent plusieurs univers (fantasy, horreur, science-fiction, post-apo…), avec une
-            attention particulière portée à l'accueil des nouveaux membres et au partage des tables.
-          </p>
-        </article>
+        <div class="space-y-8">
+          <InfoCard heading="Notre Mission">
+            <p>
+              Promouvoir le jeu de rôle sous toutes ses formes à Angers et ses environs. Nous organisons des séances hebdomadaires, 
+              participons à des festivals locaux et accueillons régulièrement des curieux pour leur faire découvrir ce loisir.
+            </p>
+          </InfoCard>
+
+          <InfoCard heading="L'Équipe">
+            <p>
+              L'association est gérée bénévolement par un bureau dynamique et passionné. Chaque membre participe à faire vivre le club, 
+              que ce soit en tant que meneur de jeu ou en s'impliquant dans l'organisation des événements.
+            </p>
+          </InfoCard>
+        </div>
       </div>
 
-      <div class="about-grid mt-8">
-        <article class="parchment-highlight p-8">
-          <h2 class="paragraph-header">Informations pratiques</h2>
-          <ul class="ml-6 list-disc">
-            <li>Adresse actuelle annoncée : Résidence Arceau, 12 rue Boisramé, 49000 Angers.</li>
-            <li>Prise de contact : forum, Discord et e-mail associatif.</li>
-            <li>Premières séances possibles en découverte avant adhésion annuelle.</li>
-          </ul>
-          <p>
-            Pour suivre les parties et proposer une table, le forum reste le point de référence de l'organisation.
-          </p>
-        </article>
-
-        <article class="parchment-highlight p-8">
-          <h2 class="paragraph-header">Sources publiques utilisées</h2>
-          <p>
-            Cette page compile des informations publiques déjà diffusées par l'association sur ses canaux en ligne
-            (site, forum, communauté Discord) et des éléments historiques généraux sur Dumnacus.
-          </p>
-          <p>
-            Le contenu sera enrichi avec des validations de l'équipe avant publication officielle.
-          </p>
-        </article>
+      <div class="parchment-highlight mb-16">
+        <h3 class="paragraph-header">Nos Valeurs</h3>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="text-4xl mb-4">🤝</div>
+            <h4 class="font-richard text-2xl mb-2 text-[var(--color-gold-light)]">Convivialité</h4>
+            <p>Le plaisir de jouer ensemble avant tout, dans le respect et la bonne humeur.</p>
+          </div>
+          <div>
+            <div class="text-4xl mb-4">🎭</div>
+            <h4 class="font-richard text-2xl mb-2 text-[var(--color-gold-light)]">Inclusion</h4>
+            <p>Un espace sûr et accueillant pour toutes et tous, vétérans comme débutants.</p>
+          </div>
+          <div>
+            <div class="text-4xl mb-4">🌟</div>
+            <h4 class="font-richard text-2xl mb-2 text-[var(--color-gold-light)]">Imagination</h4>
+            <p>Explorer des mondes infinis et vivre des épopées mémorables ensemble.</p>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   </Body>
 </html>
-
-<style>
-  .about-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-  }
-
-  @media (max-width: 900px) {
-    .about-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

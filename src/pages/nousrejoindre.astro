@@ -2,119 +2,89 @@
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Body from "../components/navigation/Body.astro";
+import HeadingBox from "../components/HeadingBox.astro";
+import InfoCard from "../components/InfoCard.astro";
 ---
 
-<html lang="en">
+<!doctype html>
+<html lang="fr">
   <head>
     <BaseHead
       title={SITE_TITLE}
       description={SITE_DESCRIPTION}
       canonicalURL="https://www.heritiersdedumnacus.fr/nousrejoindre/"
     />
-    <style>
-      h2 {
-        /* font-family: "Poor Richard"; */
-        font-weight: bold;
-        font-size: xx-large;
-      }
-    </style>
   </head>
-
   <Body>
-    <div class="w-9/10 mx-10">
-      <h1
-        class="margin text-bold rounded-lg border-[3px] p-6 text-center font-richard text-6xl drop-shadow-lg"
-        style="background-color: rgba(117, 186, 3, 0.7);"
-      >
-        Nous Rejoindre
-      </h1><br />
-      <!-- <div class="parchment-highlight w-full"> -->
-      <div class="full-parchment">
-        <h2 class="font-richard font-extrabold">J'en suis !</h2><br />
-        <p>
-          Nous vous accueillerons avec plaisir dans notre association, que vous soyez débutant complet ou vétéran du jeu
-          de rôle, joueur ou maître du jeu, nous sommes ouverts à tous !
-        </p>
-        <p>
-          Vous pouvez commencer par un premier contact via mail avec heritiers.dumnacus@gmail.com, ou bien directement
-          via le forum ou notre serveurs Discord.
-        </p>
-        <p>Puis découvrir notre planning et nos activités sur le forum.</p>
+    <div class="container-custom py-12">
+      <HeadingBox>Nous Rejoindre</HeadingBox>
+
+      <div class="my-16 grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <div class="parchment-card">
+          <h2 class="mb-6 border-b border-black/10 pb-4 text-center font-richard text-4xl">L'Association</h2>
+          <div class="space-y-4 text-lg leading-relaxed">
+            <p>
+              Rejoindre <span class="font-bold">Les Héritiers de Dumnacus</span>, c'est intégrer une communauté de
+              passionnés qui fait vivre le jeu de rôle à Angers depuis de nombreuses années.
+            </p>
+            <p>
+              Que vous soyez un vétéran des premières éditions ou que vous n'ayez jamais touché un dé de votre vie,
+              notre porte est grande ouverte. Nous privilégions la convivialité, le partage et l'imaginaire.
+            </p>
+            <div class="mt-8 rounded-lg border border-black/5 bg-black/5 p-6">
+              <h4 class="mb-2 font-bold">Nos locaux :</h4>
+              <p>12 rue Louis Boiramé, 49000 Angers (Résidence Arceau).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <InfoCard heading="Séances d'essai">
+            <p>
+              Le jeu de rôle est une expérience unique qu'il faut vivre pour comprendre. C'est pourquoi nous offrons
+              <span class="font-bold text-[var(--color-gold-light)]">3 séances d'essai gratuites</span>. Venez,
+              asseyez-vous à une table, et voyez si l'ambiance vous plaît avant de vous engager !
+            </p>
+          </InfoCard>
+
+          <InfoCard heading="Adhésion">
+            <p>Pour soutenir l'association et accéder à toutes nos activités à l'année :</p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center justify-between border-b border-white/10 pb-2">
+                <span>Tarif Normal</span>
+                <span class="text-xl font-bold text-[var(--color-gold-light)]">20€ / an</span>
+              </li>
+              <li class="flex items-center justify-between border-b border-white/10 pb-2">
+                <span>Tarif Étudiant</span>
+                <span class="text-xl font-bold text-[var(--color-gold-light)]">15€ / an</span>
+              </li>
+            </ul>
+            <p class="mt-4 text-sm italic opacity-80">L'adhésion court de septembre à septembre.</p>
+          </InfoCard>
+        </div>
       </div>
-      <br />
-      <div class="full-parchment">
-        <h2 class="font-richard font-extrabold">Je m'y rends comment ?</h2><br />
-        <p>
-          Les Héritiers de Dumnacus sont actuellement situés dans la résidence Arceau au 12 rue Boisramé, 49000 Angers.<br
-          />
-          Sur place vous pourrez nous trouver via l'entrée accessible en faisant le tour du bâtiment par le square Louis
-          Boisramé. Un de nos membres viendra vous ouvrir.
-        </p>
 
-        <p>Pour y aller, plusieurs solutions sont possibles :</p>
-        <ul class="ml-6 list-disc">
-          <li>
-            En voiture, il y a un parking attenant à la résidence, ainsi que le parking place Marcel Vigne à 200m.
-          </li>
-          <li>En tramway, les lignes B et C passent à l'arrêt Élysée.</li>
-          <li>En bus, les lignes 2 et 6 s'arrête juste à côté à l'arrêt Boisramé.</li>
-        </ul>
-      </div>
-      <br />
-      <div class="full-parchment">
-        <h2 class="font-richard font-extrabold">J'y suis, je vais où ?</h2><br />
-        <p>
-          Si 19h approche et que les portes sont déverrouillées, entrez ! Vous pourrez retrouver vos compagnons de jeu
-          dans la salle à gauche de l'entrée. Et si vous arrivez avant l'un de nos gardiens des clés, prenez le temps de
-          discuter avec les autres membres déjà présents. Et si vous venez le soir, il y aura toujours du monde pour
-          vous ouvrir.
+      <div class="parchment-highlight mx-auto mb-16 max-w-3xl text-center">
+        <h3 class="paragraph-header mb-6">Prêt à lancer les dés ?</h3>
+        <p class="mb-8 text-xl">
+          La première étape est de vous faire connaître sur notre forum ou notre Discord. Présentez-vous brièvement et
+          guettez les annonces de parties !
         </p>
-      </div>
-      <br />
-      <div class="full-parchment">
-        <h2 class="font-richard font-extrabold">C'est sympa ici, comment ça se passe ?</h2>
-        <p>
-          Notre association se réunit deux fois par week-ends, pour deux parties le samedi (14h-18h et 19h00-23h00) et
-          une autre le dimanche de 14h à 18h30.
-        </p>
-
-        <p>Quand on arrive, on s'installe, on prend des nouvelles des camarades, puis l'aventure commence !</p>
-
-        <p>Si vous êtes du soir, il est possible de diner sur place, à condition d'apporter sa gamelle.</p>
-
-        <p>
-          Vous pouvez venir visiter et découvrir l'association <b>trois fois gratuitement</b> ! Une fois les trois séances
-          d'essai passées, vous pouvez nous rejoindre pour une adhésion de 20€ par an, et seulement 15€ pour les étudiants.
-        </p>
+        <div class="flex flex-col justify-center gap-4 sm:flex-row">
+          <a
+            href="https://heritiers-dumnacus.forumactif.org/"
+            class="rounded-full bg-[var(--color-gold)] px-8 py-3 font-bold text-black no-underline hover:scale-105 hover:bg-white"
+          >
+            Aller sur le Forum
+          </a>
+          <a
+            href="https://discord.gg/4qdqpWbYdA"
+            class="rounded-full border-2 border-[var(--color-gold)] px-8 py-3 font-bold text-[var(--color-gold)] no-underline hover:scale-105 hover:bg-[var(--color-gold)] hover:text-black"
+          >
+            Rejoindre le Discord
+          </a>
+        </div>
       </div>
     </div>
   </Body>
 </html>
-
-<style>
-  .full-parchment {
-    display: flex;
-    flex-direction: column;
-
-    padding: 8px;
-
-    background-image: url("/public/woodboard.png");
-    background-size: contain;
-    backdrop-filter: brightness(60%);
-
-    border: 3px solid gray;
-    border-radius: 24px;
-
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-    box-shadow: 5px 5px 15px 5px rgba(60, 60, 0, 0.1);
-
-    z-index: 10;
-
-    padding: 32px;
-    margin-left: 32px;
-    margin-right: 32px;
-    margin-bottom: 50px;
-    /* width: 41.666667%; */
-    position: relative;
-  }
-</style>

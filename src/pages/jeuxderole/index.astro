@@ -5,91 +5,30 @@ import { getCollection } from "astro:content";
 import AlignedItems from "../../components/navigation/AlignedItems.astro";
 import ImageCard from "../../components/ImageCard.astro";
 import Body from "../../components/navigation/Body.astro";
+import HeadingBox from "../../components/HeadingBox.astro";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <BaseHead
       title={SITE_TITLE}
       description={SITE_DESCRIPTION}
       canonicalURL="https://www.heritiersdedumnacus.fr/jeuxderole/"
     />
-    <style>
-      main {
-        width: 80%;
-      }
-
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      ul li {
-        width: calc(50% - 1rem);
-      }
-
-      ul li * {
-        text-decoration: none;
-        transition: 0.2s ease;
-      }
-
-      ul li img {
-        margin-bottom: 0.5rem;
-        border-radius: 12px;
-      }
-
-      ul li a {
-        display: block;
-      }
-
-      .title {
-        margin: 0;
-        color: rgb(var(--black));
-        line-height: 1;
-      }
-
-      .date {
-        margin: 0;
-        color: rgb(var(--gray));
-      }
-
-      ul li a:hover h4,
-      ul li a:hover .date {
-        color: rgb(var(--accent));
-      }
-
-      ul a:hover img {
-        box-shadow: var(--box-shadow);
-      }
-
-      @media (max-width: 720px) {
-        ul {
-          gap: 0.5em;
-        }
-
-        ul li {
-          width: 100%;
-          text-align: center;
-        }
-      }
-    </style>
   </head>
   <Body>
-    <div class="w-9/10 mx-10 mb-10">
-      <h1
-        class="margin text-bold rounded-lg border-[3px] p-6 text-center font-richard text-6xl drop-shadow-lg"
-        style="background-color: rgba(117, 186, 3, 0.7);"
-      >
-        Nos Jeux de Rôle
-      </h1><br />
-      <section>
+    <div class="container-custom py-12">
+      <HeadingBox>Nos Jeux de Rôle</HeadingBox>
+      
+      <p class="text-center text-xl max-w-2xl mx-auto my-12 italic opacity-90">
+        Découvrez les univers dans lesquels nous nous aventurons. 
+        Que ce soit pour une campagne épique ou un one-shot nerveux, il y a toujours une place à nos tables.
+      </p>
+
+      <div class="mb-10">
         <AlignedItems>
           <ImageCard
             text="Wrath & Glory"
@@ -113,36 +52,13 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
           />
           <ImageCard text="Earthdawn" image="/rpg/earthdawn.jpg" alt="Image de couverture du jeu de rôle Earthdawn" />
           <ImageCard
-            text="Aventuriers de l'Âge Atlante"
+            text="Âge Atlante"
             image="/rpg/ageatlante.jpg"
             alt="Illustration pour le jeu de rôle Aventuriers de l'Âge Atlante"
           />
           <ImageCard text="Zombies" image="/rpg/zombies.png" alt="Image de couverture du jeu de rôle Zombies" />
         </AlignedItems>
-        <!-- <Separator /> -->
-      </section>
-      <!-- <section>
-        <ul>
-          {
-            posts.map((post) => (
-              <li>
-                <a href={`/blog/${post.id}/`}>
-                  <img
-                    width={720}
-                    height={360}
-                    src={post.data.heroImage}
-                    alt=""
-                  />
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section> -->
+      </div>
     </div>
   </Body>
 </html>

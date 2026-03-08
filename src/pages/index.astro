@@ -11,169 +11,137 @@ import HeadingBox from "../components/HeadingBox.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} canonicalURL="https://www.heritiersdedumnacus.fr" />
   </head>
   <Body>
-    <div class="hero flex w-full flex-col p-10">
+    <div class="hero container-custom">
       <img
-        src="/bouclierbig.png"
-        alt="bannière"
+        src="/logo-new.png"
         id="bouclier-big"
-        alt="Logo des Héritiers de Dumnacus : un bouclier gris avec contour vert et un monogramme 'HD' en orange"
+        alt="Logo des Héritiers de Dumnacus : un monogramme 'HD' en or sur fond bleu"
       />
-      <h1 class="slogan">Et si pour une fois, c'était vous le Héros ?</h1>
+      <h1 class="slogan mt-8">Et si pour une fois, c'était vous le Héros ?</h1>
     </div>
-    <div class="margin w-full" itemscope itemprop="https://schema.org/LocalBusiness">
-      <HeadingBox
-        >Bienvenue chez les <span class="text-5xl">H</span>éritiers de <span class="text-5xl">D</span>umnacus !</HeadingBox
-      >
 
-      <br /><br /><br />
+    <div class="container-custom" itemscope itemtype="https://schema.org/LocalBusiness">
+      <HeadingBox>
+        Bienvenue chez les <span class="font-richardbold text-7xl text-[var(--color-gold)]">H</span>éritiers de <span class="font-richardbold text-7xl text-[var(--color-gold)]">D</span>umnacus !
+      </HeadingBox>
 
-      <AlignedItems>
-        <InfoCard className="mx-5 w-5/12" heading="Qui sommes-nous ?" itemprop="description">
+      <!-- First row: 3 cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+        <InfoCard heading="Qui sommes-nous ?" itemprop="description">
           Les Héritiers de Dumnacus sont une association de Jeux de Rôles située à Angers. Notre mission : partager
           notre passion en réunissant des joueurs de tous niveaux, et faire découvrir ce loisir à un public curieux lors
           d’événements ouverts à tous.
-        </InfoCard><br />
+        </InfoCard>
 
-        <InfoCard
-          className="mx-5 w-5/12"
-          heading="Vous êtes novice et n'osez pas franchir le pas ?"
-          itemprop="isAccessibleForFree"
-        >
+        <InfoCard heading="C'est pour vous ?" itemprop="isAccessibleForFree">
           <span class="font-bold">Pas besoin d’adhérer tout de suite</span> : vous pouvez venir essayer
           <span class="font-bold">gratuitement durant trois séances</span>, sans engagement. C’est notre façon de vous
           accueillir comme il se doit dans l’univers du jeu de rôle.
-        </InfoCard><br />
+        </InfoCard>
 
-        <InfoCard className="mx-5 w-5/12" heading="Le coût de l'adhésion vous effraie ?" itemprop="priceRange">
-          <div class="my-auto">
-            <p class="w-full">
-              L'adhésion ne coûte que <span class="font-bold">20€ par an</span> et seulement <span class="font-bold"
-                >15€ pour les étudiants</span
-              >. <br />
-              En devenant membre, vous profitez :
-            </p>
-            <ul class="ml-6 list-disc">
-              <li>de l’accès à toutes nos parties,</li>
-              <li>de réductions chez nos boutiques partenaires,</li>
-              <li>et d’une communauté chaleureuse et passionnée.</li>
-            </ul>
-          </div>
-        </InfoCard><br />
-      </AlignedItems>
-      <br />
-      <AlignedItems>
-        <div itemprop="address" class="parchment-highlight">
-          <!-- <img
-              src="art-deco-frame.svg#svgView(preserveAspectRatio(none))"
-              alt=""
-            /> -->
-          <div>
-            <h3 class="paragraph-header">Où nous trouver ?</h3>
-            <p class="my-auto w-full">
-              Venez nous retrouver au <span class="font-bold">12 rue Louis Boiramé, 49000 Angers</span>, dans la
-              résidence Arceau.<br />
-              Sur place vous pourrez nous trouver via l'entrée accessible en faisant le tour du bâtiment par le square Louis
-              Boisramé. Un de nos membres viendra vous ouvrir.
-            </p>
-          </div>
-        </div><br />
+        <InfoCard heading="Combien ça coûte ?" itemprop="priceRange">
+          <p>
+            L'adhésion coûte <span class="font-bold">20€ par an</span> (15€ pour les étudiants). 
+            En devenant membre :
+          </p>
+          <ul class="ml-6 mt-2 list-disc opacity-90">
+            <li>accès à toutes nos parties,</li>
+            <li>réductions chez nos boutiques partenaires,</li>
+            <li>une communauté passionnée.</li>
+          </ul>
+        </InfoCard>
+      </div>
 
-        <div itemprop="event" class="parchment-highlight">
-          <!-- <img
-              src="art-deco-frame.svg#svgView(preserveAspectRatio(none))"
-              alt=""
-            /> -->
-          <div>
-            <h3 class="paragraph-header">Quand est-ce qu'on joue ?</h3>
-            <div class="my-auto">
-              <p class="w-full">Nous organisons des parties chaque week-end :</p>
-              <ul class="ml-6 list-disc">
-                <li>le samedi soir</li>
-                <li>et le dimanche après-midi</li>
-              </ul>
-              <p class="w-full">
-                selon les propositions des meneurs et les disponibilités des joueurs.<br />
-                Vous pouvez consulter et discuter de la prochaine partie sur notre
-                <a href="https://heritiers-dumnacus.forumactif.org/" target="_blank" class="font-bold underline"
-                  >forum</a
-                > !
-              </p>
+      <!-- Second row: 3 cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div itemprop="address" class="parchment-highlight h-full">
+          <h3 class="paragraph-header">Où nous trouver ?</h3>
+          <p class="text-lg">
+            Venez nous retrouver au <span class="font-bold">12 rue Louis Boiramé, 49000 Angers</span>, dans la
+            résidence Arceau.<br />
+            Entrée via le square Louis Boisramé. Un membre viendra vous ouvrir.
+          </p>
+        </div>
+
+        <div itemprop="event" class="parchment-highlight h-full">
+          <h3 class="paragraph-header">Quand joue-t-on ?</h3>
+          <p class="text-lg">
+            Nous organisons des parties chaque week-end :
+          </p>
+          <ul class="ml-6 mt-2 list-disc opacity-90">
+            <li>le samedi soir</li>
+            <li>le dimanche après-midi</li>
+          </ul>
+          <p class="mt-4">
+            Prochaines parties sur notre
+            <a href="https://heritiers-dumnacus.forumactif.org/" target="_blank" class="font-bold underline decoration-gold-light"
+              >forum</a
+            > !
+          </p>
+        </div>
+
+        <div class="parchment-highlight h-full">
+            <h3 class="paragraph-header">Je veux essayer !</h3>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <span class="text-4xl font-richardbold text-[var(--color-gold)]">1</span>
+                <p>Allez sur notre <a href="https://heritiers-dumnacus.forumactif.org/" target="_blank" class="font-bold underline">forum</a>.</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="text-4xl font-richardbold text-[var(--color-gold)]">2</span>
+                <p>Trouvez votre partie.</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="text-4xl font-richardbold text-[var(--color-gold)]">3</span>
+                <p>Inscrivez-vous !</p>
+              </div>
             </div>
-          </div>
-        </div>
-      </AlignedItems>
-      <br />
-      <AlignedItems>
-        <div itemprop="event" class="parchment-highlight">
-          <h3 class="paragraph-header">Je veux essayer ! Je fais comment ?</h3>
-          <div class="my-auto">
-            <p class="w-full">
-              Tout le monde est le bienvenu, novice comme vétéran ! Pour vous inscrire à une partie :
+            <p class="mt-6 text-sm text-[var(--color-gold-light)] border-t border-white/20 pt-4 leading-relaxed">
+              <span class="font-bold underline decoration-gold/30">Note :</span> Âge minimum 14 ans. Certaines parties étant pour adultes, vérifiez l'accessibilité sur le forum si vous êtes mineur.
             </p>
-            <ul class="ml-6 list-decimal">
-              <li>
-                Rendez-vous sur notre <a
-                  href="https://heritiers-dumnacus.forumactif.org/"
-                  target="_blank"
-                  class="font-bold underline">forum</a
-                >.
-              </li>
-              <li>Trouvez la partie qui vous intéresse.</li>
-              <li>
-                Indiquez votre présence dans le sujet correspondant (ou via <a href="https://discord.gg/4qdqpWbYdA"
-                  >Discord</a
-                > si c’est plus simple pour vous).
-              </li>
-            </ul>
-            <i
-              ><small
-                >Note : certaines de nos parties sont pour un public <b>adulte</b>, pensez à vérifier si la partie est
-                ouverte aux plus jeunes si vous êtes mineur. L'âge minimum pour participer à nos parties est <b
-                  >14 ans</b
-                >.</small
-              ></i
-            >
           </div>
-        </div>
-      </AlignedItems>
-    </div>
-    <HeadingBox>En ce moment sur nos tables</HeadingBox>
-    <br />
-    <div class="align-mobile margin mt-10 w-10/12">
-      <AlignedItems>
-        <ImageCard text="Wrath & Glory" image="/rpg/wg.jpg" alt="Image de couverture du jeu de rôle Wrath and Glory" />
-        <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" alt="Image de couverture du jeu de rôle Fallout 111" />
-        <ImageCard
-          text="Vampire la Mascarade"
-          image="/rpg/vampire.png"
-          alt="Image de couverture du jeu de rôle Vampire la Mascarade"
-        />
-        <ImageCard text="Donjon de Poche" image="/rpg/donjondepoche.jpg" alt="Image du jeu rôle Donjon de Poche" />
-      </AlignedItems>
+      </div>
+
       <Separator />
-      <br />
-      <AlignedItems>
+
+      <HeadingBox>En ce moment sur nos tables</HeadingBox>
+      
+      <div class="mt-10">
+        <AlignedItems>
+          <ImageCard text="Wrath & Glory" image="/rpg/wg.jpg" alt="Image de couverture du jeu de rôle Wrath and Glory" />
+          <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" alt="Image de couverture du jeu de rôle Fallout 111" />
+          <ImageCard
+            text="Vampire la Mascarade"
+            image="/rpg/vampire.png"
+            alt="Image de couverture du jeu de rôle Vampire la Mascarade"
+          />
+          <ImageCard text="Donjon de Poche" image="/rpg/donjondepoche.jpg" alt="Image du jeu rôle Donjon de Poche" />
+        </AlignedItems>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-12 justify-center my-24 max-w-5xl mx-auto">
         <ImageLinkCard
           header="Notre Forum"
           href="https://heritiers-dumnacus.forumactif.org/"
           image="/forumactif-logo.png"
-          text="Pour l'organisation de nos parties"
-          alt="Logo de forumactif, plateforme du forum des Héritiers de Dumnacus"
+          text="L'espace privilégié pour l'organisation de toutes nos parties"
+          alt="Logo de forumactif"
+          className="flex-1 min-h-[400px]"
         />
         <ImageLinkCard
           header="Notre Discord"
           href="https://discord.gg/4qdqpWbYdA"
           image="/Discord-Logo.png"
-          text="Notre second plateforme de communication"
-          alt="Logo de Discord, plateforme de communication secondaire des Héritiers de Dumnacus"
+          text="Pour discuter en direct avec les membres de la communauté"
+          alt="Logo de Discord"
+          className="flex-1 min-h-[400px]"
         />
-      </AlignedItems>
-      <br />
+      </div>
     </div>
   </Body>
 </html>
