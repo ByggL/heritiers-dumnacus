@@ -16,29 +16,25 @@ import InfoCard from "../components/InfoCard.astro";
       <HeadingBox>À Propos de Nous</HeadingBox>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 my-16">
-        <div class="parchment-card">
-          <h2 class="font-richard text-4xl mb-6 text-center border-b border-black/10 pb-4">Notre Histoire</h2>
+        <InfoCard heading="Notre Histoire">
           <div class="space-y-4 text-lg leading-relaxed">
             <p>
-              Fondée par un groupe de passionnés, l'association <span class="font-bold text-[var(--color-blue-dark)]">Les Héritiers de Dumnacus</span> 
-              est devenue au fil des années un pilier de la culture ludique à Angers.
+              Fondée officiellement en <span class="font-bold text-[var(--color-gold-light)]">janvier 1996</span>, l'association <span class="font-bold text-[var(--color-gold-light)]">Les Héritiers de Dumnacus</span> est la plus ancienne structure dédiée au jeu de rôle à Angers.
             </p>
             <p>
-              Le nom de notre club rend hommage à <span class="italic">Dumnacus</span>, chef gaulois des Andes qui lutta courageusement 
-              pour la liberté de son peuple. C'est cet esprit de camaraderie et d'aventure que nous insufflons à nos tables de jeu.
+              Initialement connue sous le nom d'<span class="italic">Association Angevine des Jeux de Rôle et de Simulation</span> (AAJRS), elle a adopté son nom actuel en hommage à <span class="font-bold">Dumnacus</span>, le chef gaulois des Andécaves qui a mené la résistance locale contre les légions de Jules César.
             </p>
             <p>
-              Nous croyons que le jeu de rôle est un puissant vecteur d'imaginaire, de lien social et de créativité, 
-              accessible à tous sans distinction.
+              Depuis près de 30 ans, le club s'est imposé comme un pilier de la culture ludique angevine, offrant un espace de rencontre et d'aventure pour des générations de joueurs, des vétérans du D20 aux nouveaux curieux.
             </p>
           </div>
-        </div>
+        </InfoCard>
 
         <div class="space-y-8">
           <InfoCard heading="Notre Mission">
             <p>
               Promouvoir le jeu de rôle sous toutes ses formes à Angers et ses environs. Nous organisons des séances hebdomadaires, 
-              participons à des festivals locaux et accueillons régulièrement des curieux pour leur faire découvrir ce loisir.
+              participons à des festivals locaux (comme l'Angers Geekfest) et accueillons régulièrement des curieux pour leur faire découvrir ce loisir.
             </p>
           </InfoCard>
 
@@ -48,27 +44,6 @@ import InfoCard from "../components/InfoCard.astro";
               que ce soit en tant que meneur de jeu ou en s'impliquant dans l'organisation des événements.
             </p>
           </InfoCard>
-        </div>
-      </div>
-
-      <div class="parchment-highlight mb-16">
-        <h3 class="paragraph-header">Nos Valeurs</h3>
-        <div class="grid md:grid-cols-3 gap-8 text-center">
-          <div>
-            <div class="text-4xl mb-4">🤝</div>
-            <h4 class="font-richard text-2xl mb-2 text-[var(--color-gold-light)]">Convivialité</h4>
-            <p>Le plaisir de jouer ensemble avant tout, dans le respect et la bonne humeur.</p>
-          </div>
-          <div>
-            <div class="text-4xl mb-4">🎭</div>
-            <h4 class="font-richard text-2xl mb-2 text-[var(--color-gold-light)]">Inclusion</h4>
-            <p>Un espace sûr et accueillant pour toutes et tous, vétérans comme débutants.</p>
-          </div>
-          <div>
-            <div class="text-4xl mb-4">🌟</div>
-            <h4 class="font-richard text-2xl mb-2 text-[var(--color-gold-light)]">Imagination</h4>
-            <p>Explorer des mondes infinis et vivre des épopées mémorables ensemble.</p>
-          </div>
         </div>
       </div>
     </div>

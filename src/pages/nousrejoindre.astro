@@ -20,8 +20,7 @@ import InfoCard from "../components/InfoCard.astro";
       <HeadingBox>Nous Rejoindre</HeadingBox>
 
       <div class="my-16 grid grid-cols-1 gap-12 lg:grid-cols-2">
-        <div class="parchment-card">
-          <h2 class="mb-6 border-b border-black/10 pb-4 text-center font-richard text-4xl">L'Association</h2>
+        <InfoCard heading="L'Association">
           <div class="space-y-4 text-lg leading-relaxed">
             <p>
               Rejoindre <span class="font-bold">Les Héritiers de Dumnacus</span>, c'est intégrer une communauté de
@@ -31,12 +30,12 @@ import InfoCard from "../components/InfoCard.astro";
               Que vous soyez un vétéran des premières éditions ou que vous n'ayez jamais touché un dé de votre vie,
               notre porte est grande ouverte. Nous privilégions la convivialité, le partage et l'imaginaire.
             </p>
-            <div class="mt-8 rounded-lg border border-black/5 bg-black/5 p-6">
-              <h4 class="mb-2 font-bold">Nos locaux :</h4>
-              <p>12 rue Louis Boiramé, 49000 Angers (Résidence Arceau).</p>
-            </div>
           </div>
-        </div>
+          <div class="my-auto rounded-lg border border-white/10 bg-black/20 p-6">
+            <h4 class="mb-2 font-bold text-[var(--color-gold-light)]">Nos locaux :</h4>
+            <p>12 rue Louis Boiramé, 49000 Angers (Résidence Arceau).</p>
+          </div>
+        </InfoCard>
 
         <div class="space-y-8">
           <InfoCard heading="Séances d'essai">
@@ -55,7 +54,10 @@ import InfoCard from "../components/InfoCard.astro";
                 <span class="text-xl font-bold text-[var(--color-gold-light)]">20€ / an</span>
               </li>
               <li class="flex items-center justify-between border-b border-white/10 pb-2">
-                <span>Tarif Étudiant</span>
+                <div>
+                  <span>Tarif Étudiant</span>
+                  <span class="text-sm italic opacity-80">(sur présentation d'une carte étudiant)</span>
+                </div>
                 <span class="text-xl font-bold text-[var(--color-gold-light)]">15€ / an</span>
               </li>
             </ul>
@@ -73,7 +75,7 @@ import InfoCard from "../components/InfoCard.astro";
         <div class="flex flex-col justify-center gap-4 sm:flex-row">
           <a
             href="https://heritiers-dumnacus.forumactif.org/"
-            class="rounded-full bg-[var(--color-gold)] px-8 py-3 font-bold text-black no-underline hover:scale-105 hover:bg-white"
+            class="rounded-full border-2 border-[var(--color-gold)] px-8 py-3 font-bold text-[var(--color-gold)] no-underline hover:scale-105 hover:bg-[var(--color-gold)] hover:text-black"
           >
             Aller sur le Forum
           </a>

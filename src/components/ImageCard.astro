@@ -5,9 +5,10 @@ interface Props {
   text: string;
   image: string;
   alt?: string;
+  contain?: boolean;
 }
 
-const { text, image = "/logo-new.png", alt } = Astro.props;
+const { text, image = "/logo-new.png", alt, contain = false } = Astro.props;
 ---
 
 <div class="group flex flex-col justify-between transition-all duration-300 hover:scale-105" id="wrapper" itemscope itemprop="https://schema.org/Game">
@@ -17,7 +18,10 @@ const { text, image = "/logo-new.png", alt } = Astro.props;
     
     <img 
         src={image} 
-        class="relative z-10 h-full w-full object-cover" 
+        class:list={[
+          "relative z-10 h-full w-full",
+          contain ? "object-contain p-4" : "object-cover"
+        ]}
         alt={alt} 
     />
   </div>
