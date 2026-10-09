@@ -10,10 +10,10 @@
   --color-blue-dark: #003366;
   --color-gold: #d4af37;
   --color-gold-light: #f1d37a;
-  
+
   --accent: var(--color-blue);
   --accent-dark: var(--color-blue-dark);
-  
+
   --black: #111;
   --gray: #666;
   --gray-light: 229, 233, 240;
@@ -180,11 +180,11 @@ a:hover {
   color: var(--text-parchment);
   padding: 3rem; /* Increased and standardized padding */
   border-radius: 4px;
-  box-shadow: 
-    0 5px 15px rgba(0,0,0,0.3),
-    inset 0 0 40px rgba(0,0,0,0.1);
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(0, 0, 0, 0.1);
   position: relative;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .parchment-card h1,
@@ -198,17 +198,18 @@ a:hover {
 .parchment-highlight {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
-  background-image: 
-    radial-gradient(circle, rgba(60, 40, 20, 0.1) 0%, rgba(30, 20, 10, 0.4) 100%),
-    url("/woodboard.png");
+  padding: 2rem;
+  background-image:
+    radial-gradient(circle, rgba(60, 40, 20, 0.1) 0%, rgba(30, 20, 10, 0.4) 100%), url("/woodboard.png");
   background-size: cover;
   border: 2px solid var(--color-gold);
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 30, 60, 0.4);
   z-index: 10;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.5);
+  text-shadow:
+    1px 1px 3px rgba(0, 0, 0, 0.9),
+    0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /* ===== RESPONSIVE ADJUSTEMENTS ===== */
@@ -236,7 +237,7 @@ a:hover {
     font-size: 2rem;
     color: white;
     line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
   #bouclier-big {
@@ -254,7 +255,7 @@ a:hover {
     font-family: "Poor Richard";
     font-size: 3.5vw;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
   #bouclier-big {
@@ -278,10 +279,7 @@ a:hover {
 
 .body-background {
   background-attachment: fixed;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/tavernout.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/tavernout.jpg");
   background-size: cover;
   background-position: center;
 }
-

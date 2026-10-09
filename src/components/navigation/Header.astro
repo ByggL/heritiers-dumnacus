@@ -11,15 +11,11 @@ import "../../styles/global.css";
     <div class="tavern-sign tavern-sign-main flex items-center px-10 py-4">
       <div class="sign-bracket left-bracket"></div>
       <div class="logo-wrapper relative">
-        <img
-          src="/logo-new.png"
-          alt="Logo"
-          class="h-20 w-auto drop-shadow-2xl transition-transform hover:rotate-12"
-        />
+        <img src="/logo-new.png" alt="Logo" class="h-20 w-auto drop-shadow-2xl transition-transform hover:rotate-12" />
       </div>
-      <h2 class="ml-8 font-richard text-4xl font-bold tracking-tight text-white drop-shadow-md">
+      <h2 class="ml-8 font-richard text-4xl font-bold tracking-normal text-white drop-shadow-md">
         <a href="/" class="no-underline hover:text-[var(--color-gold-light)]">
-          <span class="font-pandion text-5xl text-[var(--color-gold)]">H</span>éritiers de 
+          <span class="font-pandion text-5xl text-[var(--color-gold)]">H</span>éritiers de
           <span class="font-pandion text-5xl text-[var(--color-gold)]">D</span>umnacus
         </a>
       </h2>
@@ -49,11 +45,11 @@ import "../../styles/global.css";
     background-position: center;
     border: 3px solid var(--color-gold);
     border-radius: 8px;
-    box-shadow: 
+    box-shadow:
       0 15px 35px rgba(0, 0, 0, 0.7),
       inset 0 0 50px rgba(0, 0, 0, 0.3);
     position: relative;
-    filter: brightness(1.1) contrast(1.1);
+    /* filter: brightness(1.1) contrast(1.1); */
   }
 
   /* Brackets (Simulating wrought iron attachment) */
@@ -68,7 +64,7 @@ import "../../styles/global.css";
   }
 
   .sign-bracket::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -15px;
     left: 50%;
@@ -79,8 +75,12 @@ import "../../styles/global.css";
     border-radius: 2px;
   }
 
-  .left-bracket { left: 40px; }
-  .right-bracket { right: 40px; }
+  .left-bracket {
+    left: 40px;
+  }
+  .right-bracket {
+    right: 40px;
+  }
 
   /* Navigation Specifics */
   .tavern-nav {

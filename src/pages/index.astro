@@ -27,27 +27,32 @@ import HeadingBox from "../components/HeadingBox.astro";
 
     <div class="container-custom" itemscope itemtype="https://schema.org/LocalBusiness">
       <HeadingBox>
-        Bienvenue chez les <span class="font-richardbold text-7xl text-[var(--color-gold)]">H</span>éritiers de <span class="font-richardbold text-7xl text-[var(--color-gold)]">D</span>umnacus !
+        Bienvenue chez les <span class="font-richardbold text-7xl text-[var(--color-gold)]">H</span>éritiers de <span
+          class="font-richardbold text-7xl text-[var(--color-gold)]">D</span
+        >umnacus !
       </HeadingBox>
 
       <!-- First row: 3 cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+      <div class="my-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <InfoCard heading="Qui sommes-nous ?" itemprop="description">
-          Les Héritiers de Dumnacus sont une association de Jeux de Rôles située à Angers. Notre mission : partager
-          notre passion en réunissant des joueurs de tous niveaux, et faire découvrir ce loisir à un public curieux lors
-          d’événements ouverts à tous.
+          <p>
+            Les Héritiers de Dumnacus sont une association de Jeux de Rôles située à Angers. Notre mission : partager
+            notre passion en réunissant des joueurs de tous niveaux, et faire découvrir ce loisir à un public curieux
+            lors d’événements ouverts à tous.
+          </p>
         </InfoCard>
 
         <InfoCard heading="C'est pour vous ?" itemprop="isAccessibleForFree">
-          <span class="font-bold">Pas besoin d’adhérer tout de suite</span> : vous pouvez venir essayer
-          <span class="font-bold">gratuitement durant trois séances</span>, sans engagement. C’est notre façon de vous
-          accueillir comme il se doit dans l’univers du jeu de rôle.
+          <p>
+            <span class="font-bold">Pas besoin d’adhérer tout de suite</span> : vous pouvez venir essayer
+            <span class="font-bold">gratuitement durant trois séances</span>, sans engagement. C’est notre façon de vous
+            accueillir comme il se doit dans l’univers du jeu de rôle.
+          </p>
         </InfoCard>
 
         <InfoCard heading="Combien ça coûte ?" itemprop="priceRange">
           <p>
-            L'adhésion coûte <span class="font-bold">20€ par an</span> (15€ pour les étudiants). 
-            En devenant membre :
+            L'adhésion coûte <span class="font-bold">20€ par an</span> (15€ pour les étudiants). En devenant membre :
           </p>
           <ul class="ml-6 mt-2 list-disc opacity-90">
             <li>accès à toutes nos parties,</li>
@@ -58,59 +63,66 @@ import HeadingBox from "../components/HeadingBox.astro";
       </div>
 
       <!-- Second row: 3 cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div class="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <div itemprop="address" class="parchment-highlight h-full">
           <h3 class="paragraph-header">Où nous trouver ?</h3>
           <p class="text-lg">
-            Venez nous retrouver au <span class="font-bold">12 rue Louis Boiramé, 49000 Angers</span>, dans la
-            résidence Arceau.<br />
+            Venez nous retrouver au <span class="font-bold">12 rue Louis Boiramé, 49000 Angers</span>, dans la résidence
+            Arceau.<br />
             Entrée via le square Louis Boisramé. Un membre viendra vous ouvrir.
           </p>
         </div>
 
         <div itemprop="event" class="parchment-highlight h-full">
           <h3 class="paragraph-header">Quand joue-t-on ?</h3>
-          <p class="text-lg">
-            Nous organisons des parties chaque week-end :
-          </p>
+          <p class="text-lg">Nous organisons des parties chaque week-end :</p>
           <ul class="ml-6 mt-2 list-disc opacity-90">
             <li>le samedi soir</li>
             <li>le dimanche après-midi</li>
           </ul>
           <p class="mt-4">
             Prochaines parties sur notre
-            <a href="https://heritiers-dumnacus.forumactif.org/" target="_blank" class="font-bold underline decoration-gold-light"
-              >forum</a
+            <a
+              href="https://heritiers-dumnacus.forumactif.org/"
+              target="_blank"
+              class="decoration-gold-light font-bold underline">forum</a
             > !
           </p>
         </div>
 
         <div class="parchment-highlight h-full">
-            <h3 class="paragraph-header">Je veux essayer !</h3>
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <span class="text-4xl font-richardbold text-[var(--color-gold)]">1</span>
-                <p>Allez sur notre <a href="https://heritiers-dumnacus.forumactif.org/" target="_blank" class="font-bold underline">forum</a>.</p>
-              </div>
-              <div class="flex items-center gap-4">
-                <span class="text-4xl font-richardbold text-[var(--color-gold)]">2</span>
-                <p>Trouvez votre partie.</p>
-              </div>
-              <div class="flex items-center gap-4">
-                <span class="text-4xl font-richardbold text-[var(--color-gold)]">3</span>
-                <p>Inscrivez-vous !</p>
-              </div>
+          <h3 class="paragraph-header">Je veux essayer !</h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <span class="font-richardbold text-4xl text-[var(--color-gold)]">1</span>
+              <p>
+                Allez sur notre <a
+                  href="https://heritiers-dumnacus.forumactif.org/"
+                  target="_blank"
+                  class="font-bold underline">forum</a
+                >.
+              </p>
             </div>
-            <p class="mt-6 text-sm text-[var(--color-gold-light)] border-t border-white/20 pt-4 leading-relaxed">
-              <span class="font-bold underline decoration-gold/30">Note :</span> Âge minimum 14 ans. Certaines parties étant pour adultes, vérifiez l'accessibilité sur le forum si vous êtes mineur.
-            </p>
+            <div class="flex items-center gap-4">
+              <span class="font-richardbold text-4xl text-[var(--color-gold)]">2</span>
+              <p>Trouvez votre partie.</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="font-richardbold text-4xl text-[var(--color-gold)]">3</span>
+              <p>Inscrivez-vous !</p>
+            </div>
           </div>
+          <p class="mt-6 border-t border-white/20 pt-4 text-sm leading-relaxed text-[var(--color-gold-light)]">
+            <span class="decoration-gold/30 font-bold underline">Note :</span> Âge minimum <b>14 ans</b>. Certaines
+            parties étant pour adultes, vérifiez leur accessibilité sur le forum si vous êtes mineur.
+          </p>
+        </div>
       </div>
 
       <Separator />
 
       <HeadingBox>En ce moment sur nos tables</HeadingBox>
-      
+
       <div class="mt-10">
         <AlignedItems>
           <ImageCard text="Fallout 111" image="/rpg/fallout.jpg" alt="Image de couverture du jeu de rôle Fallout 111" />
@@ -125,14 +137,14 @@ import HeadingBox from "../components/HeadingBox.astro";
         </AlignedItems>
       </div>
 
-      <div class="flex flex-col md:flex-row gap-12 justify-center my-24 max-w-5xl mx-auto">
+      <div class="mx-auto my-24 flex max-w-5xl flex-col justify-center gap-12 md:flex-row">
         <ImageLinkCard
           header="Notre Forum"
           href="https://heritiers-dumnacus.forumactif.org/"
           image="/forumactif-logo.png"
           text="L'espace privilégié pour l'organisation de toutes nos parties"
           alt="Logo de forumactif"
-          className="flex-1 min-h-[400px]"
+          className="min-h-[400px] flex-1"
         />
         <ImageLinkCard
           header="Notre Discord"
@@ -140,7 +152,7 @@ import HeadingBox from "../components/HeadingBox.astro";
           image="/Discord-Logo.png"
           text="Pour discuter en direct avec les membres de la communauté"
           alt="Logo de Discord"
-          className="flex-1 min-h-[400px]"
+          className="min-h-[400px] flex-1"
         />
       </div>
     </div>
